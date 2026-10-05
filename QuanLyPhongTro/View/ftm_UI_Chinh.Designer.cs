@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            lbl_logo = new Label();
-            btnTrangChu = new Button();
-            btnPhong = new Button();
-            btnKhachThue = new Button();
-            btnHopDong = new Button();
-            btnHoaDon = new Button();
-            btnThanhToan = new Button();
-            btnNhanVien = new Button();
             btnThongKe = new Button();
-            lblTieuDe = new Label();
+            btnNhanVien = new Button();
+            btnThanhToan = new Button();
+            btnHoaDon = new Button();
+            btnHopDong = new Button();
+            btnKhachThue = new Button();
+            btnPhong = new Button();
+            btnTrangChu = new Button();
+            lbl_logo = new Label();
+            panel2 = new Panel();
             lblNguoiDung = new Label();
+            lblTieuDe = new Label();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -64,38 +64,90 @@
             panel1.Size = new Size(200, 453);
             panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnThongKe
             // 
-            panel2.Controls.Add(lblNguoiDung);
-            panel2.Controls.Add(lblTieuDe);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(200, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(584, 85);
-            panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            btnThongKe.FlatAppearance.BorderSize = 0;
+            btnThongKe.FlatStyle = FlatStyle.Flat;
+            btnThongKe.ForeColor = Color.White;
+            btnThongKe.Location = new Point(3, 397);
+            btnThongKe.Name = "btnThongKe";
+            btnThongKe.Size = new Size(210, 45);
+            btnThongKe.TabIndex = 8;
+            btnThongKe.Text = "Thống kê";
+            btnThongKe.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // btnNhanVien
             // 
-            panel3.BackColor = SystemColors.AppWorkspace;
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(200, 85);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(584, 368);
-            panel3.TabIndex = 2;
+            btnNhanVien.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatStyle = FlatStyle.Flat;
+            btnNhanVien.ForeColor = Color.White;
+            btnNhanVien.Location = new Point(3, 346);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Size = new Size(210, 45);
+            btnNhanVien.TabIndex = 7;
+            btnNhanVien.Text = "Nhân viên";
+            btnNhanVien.UseVisualStyleBackColor = true;
             // 
-            // lbl_logo
+            // btnThanhToan
             // 
-            lbl_logo.AutoSize = true;
-            lbl_logo.Dock = DockStyle.Top;
-            lbl_logo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_logo.ForeColor = Color.White;
-            lbl_logo.Location = new Point(0, 0);
-            lbl_logo.Name = "lbl_logo";
-            lbl_logo.Size = new Size(188, 23);
-            lbl_logo.TabIndex = 0;
-            lbl_logo.Text = "QUẢN LÝ PHÒNG TRỌ";
-            lbl_logo.TextAlign = ContentAlignment.MiddleCenter;
+            btnThanhToan.FlatAppearance.BorderSize = 0;
+            btnThanhToan.FlatStyle = FlatStyle.Flat;
+            btnThanhToan.ForeColor = Color.White;
+            btnThanhToan.Location = new Point(3, 295);
+            btnThanhToan.Name = "btnThanhToan";
+            btnThanhToan.Size = new Size(210, 45);
+            btnThanhToan.TabIndex = 6;
+            btnThanhToan.Text = "Thanh toán";
+            btnThanhToan.UseVisualStyleBackColor = true;
+            // 
+            // btnHoaDon
+            // 
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.ForeColor = Color.White;
+            btnHoaDon.Location = new Point(3, 244);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Size = new Size(210, 45);
+            btnHoaDon.TabIndex = 5;
+            btnHoaDon.Text = "Hóa đơn";
+            btnHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // btnHopDong
+            // 
+            btnHopDong.FlatAppearance.BorderSize = 0;
+            btnHopDong.FlatStyle = FlatStyle.Flat;
+            btnHopDong.ForeColor = Color.White;
+            btnHopDong.Location = new Point(3, 193);
+            btnHopDong.Name = "btnHopDong";
+            btnHopDong.Size = new Size(210, 45);
+            btnHopDong.TabIndex = 4;
+            btnHopDong.Text = "Hợp đồng";
+            btnHopDong.UseVisualStyleBackColor = true;
+            btnHopDong.Click += button4_Click;
+            // 
+            // btnKhachThue
+            // 
+            btnKhachThue.FlatAppearance.BorderSize = 0;
+            btnKhachThue.FlatStyle = FlatStyle.Flat;
+            btnKhachThue.ForeColor = Color.White;
+            btnKhachThue.Location = new Point(3, 142);
+            btnKhachThue.Name = "btnKhachThue";
+            btnKhachThue.Size = new Size(210, 45);
+            btnKhachThue.TabIndex = 3;
+            btnKhachThue.Text = "Khách thuê";
+            btnKhachThue.UseVisualStyleBackColor = true;
+            // 
+            // btnPhong
+            // 
+            btnPhong.FlatAppearance.BorderSize = 0;
+            btnPhong.FlatStyle = FlatStyle.Flat;
+            btnPhong.ForeColor = Color.White;
+            btnPhong.Location = new Point(3, 91);
+            btnPhong.Name = "btnPhong";
+            btnPhong.Size = new Size(210, 45);
+            btnPhong.TabIndex = 2;
+            btnPhong.Text = "Phòng trọ";
+            btnPhong.UseVisualStyleBackColor = true;
             // 
             // btnTrangChu
             // 
@@ -111,90 +163,38 @@
             btnTrangChu.UseVisualStyleBackColor = false;
             btnTrangChu.Click += button1_Click;
             // 
-            // btnPhong
+            // lbl_logo
             // 
-            btnPhong.FlatAppearance.BorderSize = 0;
-            btnPhong.FlatStyle = FlatStyle.Flat;
-            btnPhong.ForeColor = Color.White;
-            btnPhong.Location = new Point(3, 91);
-            btnPhong.Name = "btnPhong";
-            btnPhong.Size = new Size(210, 45);
-            btnPhong.TabIndex = 2;
-            btnPhong.Text = "Phòng trọ";
-            btnPhong.UseVisualStyleBackColor = true;
+            lbl_logo.AutoSize = true;
+            lbl_logo.Dock = DockStyle.Top;
+            lbl_logo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_logo.ForeColor = Color.White;
+            lbl_logo.Location = new Point(0, 0);
+            lbl_logo.Name = "lbl_logo";
+            lbl_logo.Size = new Size(188, 23);
+            lbl_logo.TabIndex = 0;
+            lbl_logo.Text = "QUẢN LÝ PHÒNG TRỌ";
+            lbl_logo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnKhachThue
+            // panel2
             // 
-            btnKhachThue.FlatAppearance.BorderSize = 0;
-            btnKhachThue.FlatStyle = FlatStyle.Flat;
-            btnKhachThue.ForeColor = Color.White;
-            btnKhachThue.Location = new Point(3, 142);
-            btnKhachThue.Name = "btnKhachThue";
-            btnKhachThue.Size = new Size(210, 45);
-            btnKhachThue.TabIndex = 3;
-            btnKhachThue.Text = "Khách thuê";
-            btnKhachThue.UseVisualStyleBackColor = true;
+            panel2.Controls.Add(lblNguoiDung);
+            panel2.Controls.Add(lblTieuDe);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(200, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(584, 85);
+            panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
-            // btnHopDong
+            // lblNguoiDung
             // 
-            btnHopDong.FlatAppearance.BorderSize = 0;
-            btnHopDong.FlatStyle = FlatStyle.Flat;
-            btnHopDong.ForeColor = Color.White;
-            btnHopDong.Location = new Point(3, 193);
-            btnHopDong.Name = "btnHopDong";
-            btnHopDong.Size = new Size(210, 45);
-            btnHopDong.TabIndex = 4;
-            btnHopDong.Text = "Hợp đồng";
-            btnHopDong.UseVisualStyleBackColor = true;
-            btnHopDong.Click += button4_Click;
-            // 
-            // btnHoaDon
-            // 
-            btnHoaDon.FlatAppearance.BorderSize = 0;
-            btnHoaDon.FlatStyle = FlatStyle.Flat;
-            btnHoaDon.ForeColor = Color.White;
-            btnHoaDon.Location = new Point(3, 244);
-            btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Size = new Size(210, 45);
-            btnHoaDon.TabIndex = 5;
-            btnHoaDon.Text = "Hóa đơn";
-            btnHoaDon.UseVisualStyleBackColor = true;
-            // 
-            // btnThanhToan
-            // 
-            btnThanhToan.FlatAppearance.BorderSize = 0;
-            btnThanhToan.FlatStyle = FlatStyle.Flat;
-            btnThanhToan.ForeColor = Color.White;
-            btnThanhToan.Location = new Point(3, 295);
-            btnThanhToan.Name = "btnThanhToan";
-            btnThanhToan.Size = new Size(210, 45);
-            btnThanhToan.TabIndex = 6;
-            btnThanhToan.Text = "Thanh toán";
-            btnThanhToan.UseVisualStyleBackColor = true;
-            // 
-            // btnNhanVien
-            // 
-            btnNhanVien.FlatAppearance.BorderSize = 0;
-            btnNhanVien.FlatStyle = FlatStyle.Flat;
-            btnNhanVien.ForeColor = Color.White;
-            btnNhanVien.Location = new Point(3, 346);
-            btnNhanVien.Name = "btnNhanVien";
-            btnNhanVien.Size = new Size(210, 45);
-            btnNhanVien.TabIndex = 7;
-            btnNhanVien.Text = "Nhân viên";
-            btnNhanVien.UseVisualStyleBackColor = true;
-            // 
-            // btnThongKe
-            // 
-            btnThongKe.FlatAppearance.BorderSize = 0;
-            btnThongKe.FlatStyle = FlatStyle.Flat;
-            btnThongKe.ForeColor = Color.White;
-            btnThongKe.Location = new Point(3, 397);
-            btnThongKe.Name = "btnThongKe";
-            btnThongKe.Size = new Size(210, 45);
-            btnThongKe.TabIndex = 8;
-            btnThongKe.Text = "Thống kê";
-            btnThongKe.UseVisualStyleBackColor = true;
+            lblNguoiDung.AutoSize = true;
+            lblNguoiDung.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNguoiDung.Location = new Point(228, 58);
+            lblNguoiDung.Name = "lblNguoiDung";
+            lblNguoiDung.Size = new Size(0, 21);
+            lblNguoiDung.TabIndex = 1;
             // 
             // lblTieuDe
             // 
@@ -206,14 +206,14 @@
             lblTieuDe.TabIndex = 0;
             lblTieuDe.Text = "Tổng quan hệ thống";
             // 
-            // lblNguoiDung
+            // panel3
             // 
-            lblNguoiDung.AutoSize = true;
-            lblNguoiDung.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNguoiDung.Location = new Point(228, 58);
-            lblNguoiDung.Name = "lblNguoiDung";
-            lblNguoiDung.Size = new Size(0, 21);
-            lblNguoiDung.TabIndex = 1;
+            panel3.BackColor = SystemColors.AppWorkspace;
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(200, 85);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(584, 368);
+            panel3.TabIndex = 2;
             // 
             // ftm_UI_Chinh
             // 
