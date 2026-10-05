@@ -5,7 +5,7 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frm_HoaDontruong.cs">
+    <Compile Update="View\frm_HoaDontruong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_DangNhap.cs">
@@ -14,7 +14,7 @@
     <Compile Update="View\frm_ThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\ftm_UI_Chinh.cs">
+    <Compile Update="View\frm_UI_Chinh.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace QuanLyPhongTro.View
 {
-    public partial class ftm_UI_Chinh : Form
+    public partial class frm_UI_Chinh : Form
     {
-        public ftm_UI_Chinh()
+        public frm_UI_Chinh()
         {
             InitializeComponent();
         }
@@ -28,6 +28,15 @@ namespace QuanLyPhongTro.View
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_HoaDontruong frm = new frm_HoaDontruong();
+            frm.ShowDialog();
+            frm = null;
+            this.Show();
         }
     }
 }

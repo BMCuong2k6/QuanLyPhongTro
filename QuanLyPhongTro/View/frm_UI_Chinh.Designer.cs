@@ -1,6 +1,6 @@
 ﻿namespace QuanLyPhongTro.View
 {
-    partial class ftm_UI_Chinh
+    partial class frm_UI_Chinh
     {
         /// <summary>
         /// Required designer variable.
@@ -111,6 +111,7 @@
             btnHoaDon.TabIndex = 5;
             btnHoaDon.Text = "Hóa đơn";
             btnHoaDon.UseVisualStyleBackColor = true;
+            btnHoaDon.Click += btnHoaDon_Click;
             // 
             // btnHopDong
             // 
@@ -215,7 +216,7 @@
             panel3.Size = new Size(584, 368);
             panel3.TabIndex = 2;
             // 
-            // ftm_UI_Chinh
+            // frm_UI_Chinh
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -224,7 +225,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 10F);
-            Name = "ftm_UI_Chinh";
+            Name = "frm_UI_Chinh";
             Text = "Quản Lý Phòng Trọ";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
