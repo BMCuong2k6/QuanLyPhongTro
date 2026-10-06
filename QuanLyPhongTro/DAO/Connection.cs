@@ -8,7 +8,7 @@ namespace QuanLyPhongTro.DAO
     internal class Connection
     {
         //kết nối csdl
-        static string strconn = "server=DESKTOP-AER5QIC\\SQLEXPRESS;" +
+        static string strconn = "server=LAPTOP-F6G2PCU0;" +
             "database=QLPhongTro;" +
             "Integrated Security=True;" +
             "trustservercertificate=true;";

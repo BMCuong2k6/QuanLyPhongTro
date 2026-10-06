@@ -50,6 +50,7 @@
             btnSua = new Button();
             btnXoa = new Button();
             btnThoat = new Button();
+            btnThem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvHoaDon).BeginInit();
             SuspendLayout();
             // 
@@ -128,7 +129,7 @@
             // lbl_Tt
             // 
             lbl_Tt.AutoSize = true;
-            lbl_Tt.Location = new Point(246, 215);
+            lbl_Tt.Location = new Point(12, 207);
             lbl_Tt.Name = "lbl_Tt";
             lbl_Tt.Size = new Size(78, 20);
             lbl_Tt.TabIndex = 8;
@@ -186,6 +187,7 @@
             // cbMaHD
             // 
             cbMaHD.FormattingEnabled = true;
+            cbMaHD.Items.AddRange(new object[] { "HD0019", "HD0020", "HD20021", "HD0022", "HD0023" });
             cbMaHD.Location = new Point(115, 73);
             cbMaHD.Name = "cbMaHD";
             cbMaHD.Size = new Size(181, 28);
@@ -194,7 +196,8 @@
             // cbTrangThai
             // 
             cbTrangThai.FormattingEnabled = true;
-            cbTrangThai.Location = new Point(326, 207);
+            cbTrangThai.Items.AddRange(new object[] { "Đã thanh toán", "Chưa thanh toán", "Thanh toán một phần" });
+            cbTrangThai.Location = new Point(96, 199);
             cbTrangThai.Name = "cbTrangThai";
             cbTrangThai.Size = new Size(151, 28);
             cbTrangThai.TabIndex = 17;
@@ -210,7 +213,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(59, 521);
+            btnSua.Location = new Point(202, 521);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 19;
@@ -220,7 +223,7 @@
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(192, 521);
+            btnXoa.Location = new Point(345, 521);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 20;
@@ -230,7 +233,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(326, 521);
+            btnThoat.Location = new Point(519, 521);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 21;
@@ -238,11 +241,22 @@
             btnThoat.UseVisualStyleBackColor = true;
             btnThoat.Click += btnThoat_Click;
             // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(62, 521);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(94, 29);
+            btnThem.TabIndex = 22;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
             // frm_HoaDontruong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1367, 567);
+            Controls.Add(btnThem);
             Controls.Add(btnThoat);
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
@@ -297,5 +311,6 @@
         private Button btnSua;
         private Button btnXoa;
         private Button btnThoat;
+        private Button btnThem;
     }
 }

@@ -41,9 +41,11 @@ namespace QuanLyPhongTro.DAO
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
+            // Bỏ TongTien ra khỏi câu lệnh insert vì SQL tự tính hoặc không cho sửa trực tiếp
             string strsql = "insert into HoaDon (MaHoaDon, MaHD, Thang, Nam, TienPhong, TienDien, TienNuoc, TienDichVu, TrangThai) values(@maHoaDon, @maHD, @thang, @nam, @tienPhong, @tienDien, @tienNuoc, @tienDichVu, @trangThai)";
             cmd.CommandText = strsql;
             cmd.Connection = conn;
+
             cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
             cmd.Parameters.AddWithValue("@maHD", maHD);
             cmd.Parameters.AddWithValue("@thang", thang);
@@ -53,13 +55,14 @@ namespace QuanLyPhongTro.DAO
             cmd.Parameters.AddWithValue("@tienNuoc", tienNuoc);
             cmd.Parameters.AddWithValue("@tienDichVu", tienDichVu);
             cmd.Parameters.AddWithValue("@trangThai", trangThai);
+
             try
             {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Loi: " + e.ToString());
+                MessageBox.Show("Lỗi: " + e.ToString());
                 throw;
             }
         }
@@ -68,9 +71,11 @@ namespace QuanLyPhongTro.DAO
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
+            // Bỏ TongTien ra khỏi câu lệnh update
             string strsql = "update HoaDon set MaHD=@maHD, Thang=@thang, Nam=@nam, TienPhong=@tienPhong, TienDien=@tienDien, TienNuoc=@tienNuoc, TienDichVu=@tienDichVu, TrangThai=@trangThai where MaHoaDon=@maHoaDon";
             cmd.CommandText = strsql;
             cmd.Connection = conn;
+
             cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
             cmd.Parameters.AddWithValue("@maHD", maHD);
             cmd.Parameters.AddWithValue("@thang", thang);
@@ -80,13 +85,14 @@ namespace QuanLyPhongTro.DAO
             cmd.Parameters.AddWithValue("@tienNuoc", tienNuoc);
             cmd.Parameters.AddWithValue("@tienDichVu", tienDichVu);
             cmd.Parameters.AddWithValue("@trangThai", trangThai);
+
             try
             {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Loi: " + e.ToString());
+                MessageBox.Show("Lỗi: " + e.ToString());
                 throw;
             }
         }
