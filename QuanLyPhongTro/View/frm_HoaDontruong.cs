@@ -42,42 +42,39 @@ namespace QuanLyPhongTro
         {
             if (string.IsNullOrEmpty(txtMaHoaDon.Text))
             {
-                MessageBox.Show("Vui lòng chọn hóa đơn cần sửa từ bảng danh sách!");
+                MessageBox.Show("Vui lòng chọn hóa đơn cần sửa từ bảng danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Gọi hàm update từ DAO_HoaDon (không cần hàm insert nữa)
-            DAO_Hoadontruong.updateHoadontruong(
-    txtMaHoaDon.Text.Trim(), // 1. Mã mới
-    maCu,                    // 2. Mã cũ (để WHERE)
-    cbMaHD.Text.Trim(),      // 3. Mã hợp đồng
-    txtThang.Text.Trim(),    // 4. Tháng
-    txtNam.Text.Trim(),      // 5. Năm
-    txtTienPhong.Text.Trim(),// 6. Tiền phòng
-    txtTienDien.Text.Trim(), // 7. Tiền điện
-    txtTienNuoc.Text.Trim(), // 8. Tiền nước
-    txtTienDichVu.Text.Trim(),// 9. Tiền dịch vụ
-    cbTrangThai.Text.Trim()  // 10. Trạng thái 
-            );
-
-            MessageBox.Show("Cập nhật hóa đơn thành công!");
-            LoadHoadontruong();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMaHoaDon.Text))
+            try
             {
-                MessageBox.Show("Vui lòng chọn hóa đơn cần xóa!");
-                return;
+                // Gọi hàm update và nhận kết quả trả về đúng chuẩn int
+                int kq = DAO_Hoadontruong.updateHoadontruong(
+                    txtMaHoaDon.Text.Trim(),
+                    cbMaHD.Text.Trim(),
+                    txtThang.Text.Trim(),
+                    txtNam.Text.Trim(),
+                    txtTienPhong.Text.Trim(),
+                    txtTienDien.Text.Trim(),
+                    txtTienNuoc.Text.Trim(),
+                    txtTienDichVu.Text.Trim(),
+                    cbTrangThai.Text.Trim()
+                );
+
+                // Kiểm tra kq giống hệt form nhân viên
+                if (kq > 0)
+                {
+                    MessageBox.Show("Cập nhật hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadHoadontruong();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy mã hóa đơn cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn " + txtMaHoaDon.Text + " này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dr == DialogResult.Yes)
+            catch (Exception ex)
             {
-                DAO_Hoadontruong.deleteHoadontruong(txtMaHoaDon.Text);
-                MessageBox.Show("Xóa hóa đơn thành công!");
-                LoadHoadontruong();
+                MessageBox.Show("Cập nhật thất bại, lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -153,6 +150,44 @@ namespace QuanLyPhongTro
         private void txtMaHoaDon_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void btnXoa_Click(object sender, EventArgs e) 
+        {
+            if (string.IsNullOrEmpty(txtMaHoaDon.Text.Trim()))
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn cần xóa từ bảng danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. Bật hộp thoại hỏi xác nhận trước khi xóa
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn có mã: " + txtMaHoaDon.Text.Trim() + " này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    // 3. Gọi hàm delete trong DAO để xóa trong database
+                    DAO_Hoadontruong.deleteHoadontruong(txtMaHoaDon.Text.Trim());
+
+                    MessageBox.Show("Xóa hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // 4. Load lại bảng dữ liệu
+                    LoadHoadontruong();
+
+                    // 5. Xóa trắng các ô nhập liệu sau khi xóa xong
+                    txtMaHoaDon.Clear();
+                    txtThang.Clear();
+                    txtNam.Clear();
+                    txtTienPhong.Clear();
+                    txtTienDien.Clear();
+                    txtTienNuoc.Clear();
+                    txtTienDichVu.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa thất bại, lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
