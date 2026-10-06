@@ -40,5 +40,52 @@ namespace QuanLyPhongTro.DAO
                 throw;
             }
         }
+        public static bool kiemtraemail(string email)
+        {
+            SqlCommand cmd = new SqlCommand();
+            string query = "SELECT COUNT(*) " +
+                "FROM TaiKhoan " +
+                "WHERE Email = @email";
+            cmd.CommandText = query;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@email", email);
+            try
+            {
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.ToString());
+                throw;
+            }
+        }
+        public static string laymatkhau(string email)
+        {
+            SqlCommand cmd = new SqlCommand();
+            string query = "SELECT MatKhau " +
+                "FROM TaiKhoan " +
+                "WHERE Email = @email";
+            cmd.CommandText = query;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@email", email);
+            try
+            {
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    return null; // Hoặc xử lý theo cách bạn muốn nếu không tìm thấy email
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.ToString());
+                throw;
+            }
+        }
     }
 }

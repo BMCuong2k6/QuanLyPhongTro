@@ -99,6 +99,7 @@
             btnThanhToan.TabIndex = 6;
             btnThanhToan.Text = "Thanh toán";
             btnThanhToan.UseVisualStyleBackColor = true;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // btnHoaDon
             // 

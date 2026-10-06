@@ -51,19 +51,27 @@ namespace QuanLyPhongTro.View
             try
             {
                 // 2. Gọi hàm kiểm tra từ file riêng
-                bool isValid = DAO_DangNhap_Cuong.KiemTraDangNhap(tk, mk);
+                bool i = DAO_DangNhap_Cuong.KiemTraDangNhap(tk, mk);
 
-                if (isValid)
+                if (i)
                 {
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Đăng nhập thành công!","Thông báo",
+                    //MessageBoxButtons.OK,
+                    //MessageBoxIcon.Information);
 
+                    this.Hide(); // Ẩn form đăng nhập
                     frm_UI_Chinh frmChinh = new frm_UI_Chinh();
-                    frmChinh.Show();
-                    this.Hide();
+                    frmChinh.ShowDialog(); // Hiển thị form chính
+                    frmChinh = null; // Giải phóng bộ nhớ
+                    this.Close(); // Đóng form đăng nhập
+
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!",
+                        "Lỗi đăng nhập",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -71,6 +79,24 @@ namespace QuanLyPhongTro.View
                 MessageBox.Show(ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void checkB_HienMK_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkB_HienMK.Checked)
+            {
+                txt_MatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_MatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void linkLbl_QuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_QuenMK frmQuenMK = new frm_QuenMK();
+            frmQuenMK.ShowDialog();
         }
     }
 }
