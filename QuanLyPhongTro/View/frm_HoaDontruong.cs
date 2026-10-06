@@ -11,6 +11,7 @@ namespace QuanLyPhongTro
 {
     public partial class frm_HoaDontruong : Form
     {
+        string maCu = "";
         public frm_HoaDontruong()
         {
             InitializeComponent();
@@ -47,15 +48,16 @@ namespace QuanLyPhongTro
 
             // Gọi hàm update từ DAO_HoaDon (không cần hàm insert nữa)
             DAO_Hoadontruong.updateHoadontruong(
-                txtMaHoaDon.Text,
-                cbMaHD.Text,
-                txtThang.Text,
-                txtNam.Text,
-                txtTienPhong.Text,
-                txtTienDien.Text,
-                txtTienNuoc.Text,
-                txtTienDichVu.Text,
-                cbTrangThai.Text
+    txtMaHoaDon.Text.Trim(), // 1. Mã mới
+    maCu,                    // 2. Mã cũ (để WHERE)
+    cbMaHD.Text.Trim(),      // 3. Mã hợp đồng
+    txtThang.Text.Trim(),    // 4. Tháng
+    txtNam.Text.Trim(),      // 5. Năm
+    txtTienPhong.Text.Trim(),// 6. Tiền phòng
+    txtTienDien.Text.Trim(), // 7. Tiền điện
+    txtTienNuoc.Text.Trim(), // 8. Tiền nước
+    txtTienDichVu.Text.Trim(),// 9. Tiền dịch vụ
+    cbTrangThai.Text.Trim()  // 10. Trạng thái 
             );
 
             MessageBox.Show("Cập nhật hóa đơn thành công!");
@@ -124,6 +126,33 @@ namespace QuanLyPhongTro
             {
                 MessageBox.Show("Thêm thất bại, lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
+
+                // Đổ dữ liệu từ các cột trên lưới lên các ô TextBox/ComboBox tương ứng ở trên
+                txtMaHoaDon.Text = row.Cells[0].Value.ToString(); // Hoặc dùng tên cột: row.Cells["MaHoaDon"].Value.ToString()
+                cbMaHD.Text = row.Cells[1].Value.ToString();
+                txtThang.Text = row.Cells[2].Value.ToString();
+                txtNam.Text = row.Cells[3].Value.ToString();
+                txtTienPhong.Text = row.Cells[4].Value.ToString();
+                txtTienDien.Text = row.Cells[5].Value.ToString();
+                txtTienNuoc.Text = row.Cells[6].Value.ToString();
+                txtTienDichVu.Text = row.Cells[7].Value.ToString();
+
+                // Cột 8 là Tổng Tiền (nếu có ô hiển thị tổng tiền thì gán vào, không thì thôi)
+
+                cbTrangThai.Text = row.Cells[9].Value.ToString();
+            }
+        }
+
+        private void txtMaHoaDon_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

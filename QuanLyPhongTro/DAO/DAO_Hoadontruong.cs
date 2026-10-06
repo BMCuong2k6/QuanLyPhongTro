@@ -67,16 +67,19 @@ namespace QuanLyPhongTro.DAO
             }
         }
 
-        static public void updateHoadontruong(string maHoaDon, string maHD, string thang, string nam, string tienPhong, string tienDien, string tienNuoc, string tienDichVu, string trangThai)
+        static public void updateHoadontruong(string maHoaDonMoi, string maHoaDonCu, string maHD, string thang, string nam, string tienPhong, string tienDien, string tienNuoc, string tienDichVu, string trangThai)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            // Bỏ TongTien ra khỏi câu lệnh update
-            string strsql = "update HoaDon set MaHD=@maHD, Thang=@thang, Nam=@nam, TienPhong=@tienPhong, TienDien=@tienDien, TienNuoc=@tienNuoc, TienDichVu=@tienDichVu, TrangThai=@trangThai where MaHoaDon=@maHoaDon";
+
+            // Cho phép đổi luôn cả MaHoaDon (cập nhật lại cột MaHoaDon theo mã mới)
+            string strsql = "update HoaDon set MaHoaDon=@maHoaDonMoi, MaHD=@maHD, Thang=@thang, Nam=@nam, TienPhong=@tienPhong, TienDien=@tienDien, TienNuoc=@tienNuoc, TienDichVu=@tienDichVu, TrangThai=@trangThai where MaHoaDon=@maHoaDonCu";
+
             cmd.CommandText = strsql;
             cmd.Connection = conn;
 
-            cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
+            cmd.Parameters.AddWithValue("@maHoaDonMoi", maHoaDonMoi);
+            cmd.Parameters.AddWithValue("@maHoaDonCu", maHoaDonCu); // Dùng mã cũ để tìm đúng dòng cần sửa
             cmd.Parameters.AddWithValue("@maHD", maHD);
             cmd.Parameters.AddWithValue("@thang", thang);
             cmd.Parameters.AddWithValue("@nam", nam);

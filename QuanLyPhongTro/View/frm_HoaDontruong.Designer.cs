@@ -141,6 +141,7 @@
             txtMaHoaDon.Name = "txtMaHoaDon";
             txtMaHoaDon.Size = new Size(181, 27);
             txtMaHoaDon.TabIndex = 9;
+            txtMaHoaDon.TextChanged += txtMaHoaDon_TextChanged;
             // 
             // txtThang
             // 
@@ -210,6 +211,7 @@
             dgvHoaDon.RowHeadersWidth = 51;
             dgvHoaDon.Size = new Size(1352, 188);
             dgvHoaDon.TabIndex = 18;
+            dgvHoaDon.CellContentClick += dgvHoaDon_CellContentClick;
             // 
             // btnSua
             // 
