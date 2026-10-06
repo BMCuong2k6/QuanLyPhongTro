@@ -80,7 +80,7 @@
             // 
             // btnthoat
             // 
-            btnthoat.Location = new Point(365, 438);
+            btnthoat.Location = new Point(349, 438);
             btnthoat.Name = "btnthoat";
             btnthoat.Size = new Size(94, 29);
             btnthoat.TabIndex = 3;
@@ -167,7 +167,7 @@
             // 
             // txtMtt
             // 
-            txtMtt.Location = new Point(128, 51);
+            txtMtt.Location = new Point(129, 51);
             txtMtt.Name = "txtMtt";
             txtMtt.Size = new Size(152, 27);
             txtMtt.TabIndex = 13;

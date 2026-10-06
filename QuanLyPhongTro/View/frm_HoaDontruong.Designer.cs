@@ -197,7 +197,7 @@
             // 
             cbTrangThai.FormattingEnabled = true;
             cbTrangThai.Items.AddRange(new object[] { "Đã thanh toán", "Chưa thanh toán", "Thanh toán một phần" });
-            cbTrangThai.Location = new Point(96, 199);
+            cbTrangThai.Location = new Point(115, 199);
             cbTrangThai.Name = "cbTrangThai";
             cbTrangThai.Size = new Size(151, 28);
             cbTrangThai.TabIndex = 17;
