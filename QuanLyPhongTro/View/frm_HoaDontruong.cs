@@ -151,7 +151,7 @@ namespace QuanLyPhongTro
         {
 
         }
-        private void btnXoa_Click(object sender, EventArgs e) 
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMaHoaDon.Text.Trim()))
             {
@@ -182,11 +182,37 @@ namespace QuanLyPhongTro
                     txtTienDien.Clear();
                     txtTienNuoc.Clear();
                     txtTienDichVu.Clear();
+                    cbMaHD.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Xóa thất bại, lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void dgvHoaDon_MouseClick(object sender, MouseEventArgs e)
+        {
+            DataGridView.HitTestInfo hit = dgvHoaDon.HitTest(e.X, e.Y);
+
+            // Nếu bấm vào vùng trống bên dưới bảng
+            if (hit.Type == DataGridViewHitTestType.None || hit.RowIndex < 0)
+            {
+                txtMaHoaDon.Clear();
+
+                // Thay thế bằng tên ô Mã Hợp Đồng thực tế trên form của ông (ví dụ txtMaHD hoặc cboMaHD):
+                // txtMaHD.Clear(); 
+
+                txtThang.Clear();
+                txtNam.Clear();
+                txtTienPhong.Clear();
+                txtTienDien.Clear();
+                txtTienNuoc.Clear();
+                txtTienDichVu.Clear();
+                cbMaHD.SelectedIndex = -1;
+                cbTrangThai.SelectedIndex = -1; // Xóa chọn trạng thái
+
+                txtMaHoaDon.Focus();
             }
         }
     }

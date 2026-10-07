@@ -188,7 +188,6 @@
             // cbMaHD
             // 
             cbMaHD.FormattingEnabled = true;
-            cbMaHD.Items.AddRange(new object[] { "HD0019", "HD0020", "HD20021", "HD0022", "HD0023" });
             cbMaHD.Location = new Point(115, 73);
             cbMaHD.Name = "cbMaHD";
             cbMaHD.Size = new Size(181, 28);
@@ -212,6 +211,7 @@
             dgvHoaDon.Size = new Size(1352, 188);
             dgvHoaDon.TabIndex = 18;
             dgvHoaDon.CellContentClick += dgvHoaDon_CellContentClick;
+            dgvHoaDon.MouseClick += dgvHoaDon_MouseClick;
             // 
             // btnSua
             // 
