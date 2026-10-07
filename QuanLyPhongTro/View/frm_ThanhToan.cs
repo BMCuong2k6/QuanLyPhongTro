@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QuanLyPhongTro.View 
+namespace QuanLyPhongTro.View
 {
     public partial class frm_ThanhToan : Form
     {
@@ -84,22 +84,30 @@ namespace QuanLyPhongTro.View
             {
                 string ngayThanhToan = DateTime.Now.ToString("yyyy-MM-dd");
 
-                DAO_Thanhtoan_truong.updateThanhToan(
-                    txtMtt.Text.Trim(),
-                    txtHd.Text.Trim(),
-                    ngayThanhToan,
-                    txtSt.Text.Trim(),
-                    cbPt.Text.Trim(),
-                    cbTt.Text.Trim()
-                );
-
-                MessageBox.Show("Cập nhật thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadThanhToan();
+                int kq = DAO_Thanhtoan_truong.updateThanhtoan(
+                  txtMtt.Text.Trim(),
+                  txtHd.Text.Trim(),
+                  ngayThanhToan,
+                  txtSt.Text.Trim(),
+                  cbPt.Text.Trim(),
+                  cbTt.Text.Trim()
+              );
+                if (kq > 0)
+                {
+                    MessageBox.Show("Cập nhật hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadThanhToan();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy mã hóa đơn cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Cập nhật thất bại, lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -129,6 +137,51 @@ namespace QuanLyPhongTro.View
         private void btnthoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvThanhtoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvThanhtoan.Rows[e.RowIndex];
+
+                txtMtt.Text = row.Cells[0].Value.ToString();
+                txtHd.Text = row.Cells[1].Value.ToString();
+                txtNtt.Text = row.Cells[2].Value.ToString();
+                txtSt.Text = row.Cells[3].Value.ToString();
+                cbPt.Text = row.Cells[4].Value.ToString();
+                cbTt.Text = row.Cells[5].Value.ToString();
+            }
+            else
+            {
+                // Bấm vào vùng trống bên dưới -> Xóa trắng các ô để nhập mới
+                txtMtt.Clear();
+                txtNtt.Clear();
+                txtHd.Clear();
+                txtSt.Clear();
+                cbPt.SelectedIndex = -1; // Hoặc .Text = "";
+                cbTt.SelectedIndex = -1;
+
+                // Hoặc có thể tự động sinh mã mới nếu ông thích
+            }
+        }
+
+        private void dgvThanhtoan_MouseClick(object sender, MouseEventArgs e)
+        {
+            DataGridView.HitTestInfo hit = dgvThanhtoan.HitTest(e.X, e.Y);
+
+            // Nếu click vào vùng trống bên dưới bảng
+            if (hit.Type == DataGridViewHitTestType.None || hit.RowIndex < 0)
+            {
+                txtMtt.Clear();
+                txtHd.Clear();
+                txtSt.Clear();
+                txtNtt.Clear();
+                cbPt.SelectedIndex = -1;
+                cbTt.SelectedIndex = -1;
+
+                txtMtt.Focus();
+            }
         }
     }
 }

@@ -96,6 +96,8 @@
             dgvThanhtoan.RowHeadersWidth = 51;
             dgvThanhtoan.Size = new Size(712, 472);
             dgvThanhtoan.TabIndex = 4;
+            dgvThanhtoan.CellContentClick += dgvThanhtoan_CellContentClick;
+            dgvThanhtoan.MouseClick += dgvThanhtoan_MouseClick;
             // 
             // lbl_Mtt
             // 
@@ -182,6 +184,7 @@
             // cbPt
             // 
             cbPt.FormattingEnabled = true;
+            cbPt.Items.AddRange(new object[] { "Chuyển Khoản", "Tiền Mặt" });
             cbPt.Location = new Point(128, 182);
             cbPt.Name = "cbPt";
             cbPt.Size = new Size(151, 28);
@@ -190,6 +193,7 @@
             // cbTt
             // 
             cbTt.FormattingEnabled = true;
+            cbTt.Items.AddRange(new object[] { "Đã thanh toán", "Chưa thanh toán", "Thanh toán một phần" });
             cbTt.Location = new Point(128, 215);
             cbTt.Name = "cbTt";
             cbTt.Size = new Size(151, 28);

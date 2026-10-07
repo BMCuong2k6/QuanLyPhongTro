@@ -55,12 +55,11 @@ namespace QuanLyPhongTro.DAO
         }
 
         // 3. Cập nhật thông tin thanh toán
-        public static void updateThanhToan(string maThanhToan, string maHoaDon, string ngayThanhToan, string soTien, string phuongThuc, string trangThai)
+        public static int updateThanhtoan (string maThanhToan, string maHoaDon, string ngayThanhToan, string soTien, string phuongThuc, string trangThai)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            string strsql = "UPDATE ThanhToan SET MaHoaDon=@maHoaDon, NgayThanhToan=@ngayThanhToan, SoTien=@soTien, PhuongThuc=@phuongThuc, TrangThai=@trangThai " +
-                            "WHERE MaThanhToan=@maThanhToan";
+            string strsql = "UPDATE ThanhToan SET MaHoaDon=@maHoaDon, NgayThanhToan=@ngayThanhToan, SoTien=@soTien, PhuongThuc=@phuongThuc, TrangThai=@trangThai WHERE MaThanhToan=@maThanhToan";
             cmd.CommandText = strsql;
             cmd.Connection = conn;
 
@@ -73,11 +72,12 @@ namespace QuanLyPhongTro.DAO
 
             try
             {
-                cmd.ExecuteNonQuery();
+                int kq = cmd.ExecuteNonQuery();
+                return kq;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Lỗi sửa thanh toán: " + e.ToString());
+                MessageBox.Show("Lỗi: " + e.Message);
                 throw;
             }
         }

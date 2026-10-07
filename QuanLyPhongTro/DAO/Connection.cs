@@ -11,17 +11,17 @@ namespace QuanLyPhongTro.DAO
 
         //Trường
 
-        //static string strconn = "server=LAPTOP-F6G2PCU0;" +
-        //    "database=QLPhongTro;" +
-        //    "Integrated Security=True;" +
-        //    "trustservercertificate=true;";
+        static string strconn = "server=LAPTOP-F6G2PCU0;" +
+           "database=QLPhongTro;" +
+           "Integrated Security=True;" +
+          "trustservercertificate=true;";
 
         //Cường
 
-        static string strconn = "server=DESKTOP-AER5QIC\\SQLEXPRESS;" +
-            "database=QLPhongTro;" +
-            "Integrated Security=True;" +
-            "trustservercertificate=true;";
+        //static string strconn = "server=DESKTOP-AER5QIC\\SQLEXPRESS;" +
+          //  "database=QLPhongTro;" +
+          //  "Integrated Security=True;" +
+           // "trustservercertificate=true;";
 
         // quân
 
