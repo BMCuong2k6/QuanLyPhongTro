@@ -19,6 +19,8 @@ namespace QuanLyPhongTro.DAO
             int aa = dap.Fill(tableHD);
             return tableHD;
         }
+
+
         public static bool KiemTraDangNhap(string taiKhoan, string matKhau)
         {
             SqlCommand cmd = new SqlCommand();
@@ -60,6 +62,7 @@ namespace QuanLyPhongTro.DAO
                 throw;
             }
         }
+
         public static string laymatkhau(string email)
         {
             SqlCommand cmd = new SqlCommand();
@@ -86,6 +89,70 @@ namespace QuanLyPhongTro.DAO
                 MessageBox.Show("Lỗi: " + e.ToString());
                 throw;
             }
+        }
+
+        public static void insertTaiKhoan(string tenTaiKhoan, string matKhau, string email)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            string strsql = "insert into TaiKhoan (TenTaiKhoan, MatKhau, Email) " +
+                "values(@tenTaiKhoan, @matKhau, @email)";
+            cmd.CommandText = strsql;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+            cmd.Parameters.AddWithValue("@matKhau", matKhau);
+            cmd.Parameters.AddWithValue("@email", email);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.ToString());
+                throw;
+            }
+        }
+
+        public static void updateTaiKhoan(string tenTaiKhoan, string matKhau, string email)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            string strsql = "update TaiKhoan " +
+                "set  MatKhau=@matKhau , Email=@email where TenTaiKhoan=@tenTaiKhoan";
+            cmd.CommandText = strsql;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+            cmd.Parameters.AddWithValue("@matKhau", matKhau);
+            cmd.Parameters.AddWithValue("@email", email);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.ToString());
+                throw;
+            }
+        }
+        public static void deleteTaiKhoan(string tentk)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            string strsql = "delete from TaiKhoan where TenTaiKhoan=@tenTaiKhoan";
+            cmd.CommandText = strsql;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@tenTaiKhoan", tentk);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.ToString());
+                throw;
+            }
+
+
         }
     }
 }

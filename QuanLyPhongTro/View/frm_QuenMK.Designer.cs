@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_QuenMK));
             txtb_email_qmk = new TextBox();
             label1 = new Label();
             lbl_MatKhau = new Label();
@@ -106,9 +107,10 @@
             Controls.Add(lbl_MatKhau);
             Controls.Add(label1);
             Controls.Add(txtb_email_qmk);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frm_QuenMK";
-            Text = "frm_QuenMK";
+            Text = "Quên Mật Khẩu";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btn_QLYTaiKhoan = new Button();
             btnThongKe = new Button();
             btnNhanVien = new Button();
             btnThanhToan = new Button();
@@ -49,6 +50,7 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkBlue;
+            panel1.Controls.Add(btn_QLYTaiKhoan);
             panel1.Controls.Add(btnThongKe);
             panel1.Controls.Add(btnNhanVien);
             panel1.Controls.Add(btnThanhToan);
@@ -61,15 +63,28 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 453);
+            panel1.Size = new Size(200, 496);
             panel1.TabIndex = 0;
+            // 
+            // btn_QLYTaiKhoan
+            // 
+            btn_QLYTaiKhoan.FlatAppearance.BorderSize = 0;
+            btn_QLYTaiKhoan.FlatStyle = FlatStyle.Flat;
+            btn_QLYTaiKhoan.ForeColor = Color.White;
+            btn_QLYTaiKhoan.Location = new Point(-10, 444);
+            btn_QLYTaiKhoan.Name = "btn_QLYTaiKhoan";
+            btn_QLYTaiKhoan.Size = new Size(210, 45);
+            btn_QLYTaiKhoan.TabIndex = 9;
+            btn_QLYTaiKhoan.Text = "Quản Lý Tài Khoản";
+            btn_QLYTaiKhoan.UseVisualStyleBackColor = true;
+            btn_QLYTaiKhoan.Click += btn_QLYTaiKhoan_Click;
             // 
             // btnThongKe
             // 
             btnThongKe.FlatAppearance.BorderSize = 0;
             btnThongKe.FlatStyle = FlatStyle.Flat;
             btnThongKe.ForeColor = Color.White;
-            btnThongKe.Location = new Point(3, 397);
+            btnThongKe.Location = new Point(-10, 397);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Size = new Size(210, 45);
             btnThongKe.TabIndex = 8;
@@ -81,7 +96,7 @@
             btnNhanVien.FlatAppearance.BorderSize = 0;
             btnNhanVien.FlatStyle = FlatStyle.Flat;
             btnNhanVien.ForeColor = Color.White;
-            btnNhanVien.Location = new Point(3, 346);
+            btnNhanVien.Location = new Point(-10, 346);
             btnNhanVien.Name = "btnNhanVien";
             btnNhanVien.Size = new Size(210, 45);
             btnNhanVien.TabIndex = 7;
@@ -93,7 +108,7 @@
             btnThanhToan.FlatAppearance.BorderSize = 0;
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.ForeColor = Color.White;
-            btnThanhToan.Location = new Point(3, 295);
+            btnThanhToan.Location = new Point(-10, 295);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(210, 45);
             btnThanhToan.TabIndex = 6;
@@ -106,7 +121,7 @@
             btnHoaDon.FlatAppearance.BorderSize = 0;
             btnHoaDon.FlatStyle = FlatStyle.Flat;
             btnHoaDon.ForeColor = Color.White;
-            btnHoaDon.Location = new Point(3, 244);
+            btnHoaDon.Location = new Point(-10, 244);
             btnHoaDon.Name = "btnHoaDon";
             btnHoaDon.Size = new Size(210, 45);
             btnHoaDon.TabIndex = 5;
@@ -119,7 +134,7 @@
             btnHopDong.FlatAppearance.BorderSize = 0;
             btnHopDong.FlatStyle = FlatStyle.Flat;
             btnHopDong.ForeColor = Color.White;
-            btnHopDong.Location = new Point(3, 193);
+            btnHopDong.Location = new Point(-10, 193);
             btnHopDong.Name = "btnHopDong";
             btnHopDong.Size = new Size(210, 45);
             btnHopDong.TabIndex = 4;
@@ -132,7 +147,7 @@
             btnKhachThue.FlatAppearance.BorderSize = 0;
             btnKhachThue.FlatStyle = FlatStyle.Flat;
             btnKhachThue.ForeColor = Color.White;
-            btnKhachThue.Location = new Point(3, 142);
+            btnKhachThue.Location = new Point(-10, 142);
             btnKhachThue.Name = "btnKhachThue";
             btnKhachThue.Size = new Size(210, 45);
             btnKhachThue.TabIndex = 3;
@@ -144,7 +159,7 @@
             btnPhong.FlatAppearance.BorderSize = 0;
             btnPhong.FlatStyle = FlatStyle.Flat;
             btnPhong.ForeColor = Color.White;
-            btnPhong.Location = new Point(3, 91);
+            btnPhong.Location = new Point(-10, 91);
             btnPhong.Name = "btnPhong";
             btnPhong.Size = new Size(210, 45);
             btnPhong.TabIndex = 2;
@@ -157,7 +172,7 @@
             btnTrangChu.FlatAppearance.BorderSize = 0;
             btnTrangChu.FlatStyle = FlatStyle.Flat;
             btnTrangChu.ForeColor = Color.White;
-            btnTrangChu.Location = new Point(3, 40);
+            btnTrangChu.Location = new Point(-10, 40);
             btnTrangChu.Name = "btnTrangChu";
             btnTrangChu.Size = new Size(210, 45);
             btnTrangChu.TabIndex = 1;
@@ -202,7 +217,7 @@
             // 
             lblTieuDe.AutoSize = true;
             lblTieuDe.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTieuDe.Location = new Point(6, 51);
+            lblTieuDe.Location = new Point(6, 40);
             lblTieuDe.Name = "lblTieuDe";
             lblTieuDe.Size = new Size(216, 30);
             lblTieuDe.TabIndex = 0;
@@ -214,14 +229,14 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(200, 85);
             panel3.Name = "panel3";
-            panel3.Size = new Size(584, 368);
+            panel3.Size = new Size(584, 411);
             panel3.TabIndex = 2;
             // 
             // frm_UI_Chinh
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 453);
+            ClientSize = new Size(784, 496);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -251,5 +266,6 @@
         private Button btnTrangChu;
         private Label lblNguoiDung;
         private Label lblTieuDe;
+        private Button btn_QLYTaiKhoan;
     }
 }

@@ -37,6 +37,7 @@
             checkB_HienMK = new CheckBox();
             linkLbl_QuenMK = new LinkLabel();
             label3 = new Label();
+            linkLbl_DKTK = new LinkLabel();
             SuspendLayout();
             // 
             // txt_TaiKhoan
@@ -126,11 +127,23 @@
             label3.TabIndex = 8;
             label3.Text = "Đăng Nhập";
             // 
+            // linkLbl_DKTK
+            // 
+            linkLbl_DKTK.AutoSize = true;
+            linkLbl_DKTK.Location = new Point(12, 313);
+            linkLbl_DKTK.Name = "linkLbl_DKTK";
+            linkLbl_DKTK.Size = new Size(104, 15);
+            linkLbl_DKTK.TabIndex = 9;
+            linkLbl_DKTK.TabStop = true;
+            linkLbl_DKTK.Text = "Đăng Ký Tài Khoản";
+            linkLbl_DKTK.LinkClicked += linkLbl_DKTK_LinkClicked;
+            // 
             // frm_DangNhap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(357, 337);
+            Controls.Add(linkLbl_DKTK);
             Controls.Add(label3);
             Controls.Add(linkLbl_QuenMK);
             Controls.Add(checkB_HienMK);
@@ -169,5 +182,6 @@
         private CheckBox checkB_HienMK;
         private LinkLabel linkLbl_QuenMK;
         private Label label3;
+        private LinkLabel linkLbl_DKTK;
     }
 }

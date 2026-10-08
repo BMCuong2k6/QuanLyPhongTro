@@ -98,5 +98,11 @@ namespace QuanLyPhongTro.View
             frm_QuenMK frmQuenMK = new frm_QuenMK();
             frmQuenMK.ShowDialog();
         }
+
+        private void linkLbl_DKTK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_DangKyTK frmDangKyTK = new frm_DangKyTK();
+            frmDangKyTK.ShowDialog();
+        }
     }
 }

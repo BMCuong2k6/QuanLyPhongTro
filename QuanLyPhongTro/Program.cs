@@ -1,3 +1,5 @@
+using QuanLyPhongTro.View;
+
 namespace QuanLyPhongTro
 {
     internal static class Program
@@ -14,7 +16,11 @@ namespace QuanLyPhongTro
             //Application.Run(new Form1());
             //Application.Run(new frm_HoaDontruong());
             //Application.Run(new View.ftm_UI_Chinh());
+
+
             Application.Run(new View.frm_DangNhap());
+
+            
         }
     }
 }

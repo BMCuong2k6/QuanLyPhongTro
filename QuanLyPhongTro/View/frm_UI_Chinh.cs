@@ -47,5 +47,14 @@ namespace QuanLyPhongTro.View
             frm = null;
             this.Show();
         }
+
+        private void btn_QLYTaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_QLyTaiKhoan frm = new frm_QLyTaiKhoan();
+            frm.ShowDialog();
+            frm = null;
+            this.Show();
+        }
     }
 }
