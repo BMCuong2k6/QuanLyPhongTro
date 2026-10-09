@@ -22,7 +22,11 @@ namespace QuanLyPhongTro.View
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frm_HopDong_Truong frm = new frm_HopDong_Truong();
+            frm.ShowDialog();
+            frm = null;
+            this.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

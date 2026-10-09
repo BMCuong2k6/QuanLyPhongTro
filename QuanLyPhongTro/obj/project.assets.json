@@ -1010,19 +1010,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dell\\.nuget\\packages\\": {}
+    "C:\\Users\\TRUONG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
+      "projectUniqueName": "C:\\Users\\TRUONG\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
       "projectName": "QuanLyPhongTro",
-      "projectPath": "C:\\Users\\dell\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
-      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\obj\\",
+      "projectPath": "C:\\Users\\TRUONG\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
+      "packagesPath": "C:\\Users\\TRUONG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\TRUONG\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TRUONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1080,7 +1080,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

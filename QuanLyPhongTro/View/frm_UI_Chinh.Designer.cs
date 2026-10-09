@@ -188,7 +188,7 @@
             lbl_logo.ForeColor = Color.White;
             lbl_logo.Location = new Point(0, 0);
             lbl_logo.Name = "lbl_logo";
-            lbl_logo.Size = new Size(188, 23);
+            lbl_logo.Size = new Size(244, 30);
             lbl_logo.TabIndex = 0;
             lbl_logo.Text = "QUẢN LÝ PHÒNG TRỌ";
             lbl_logo.TextAlign = ContentAlignment.MiddleCenter;
@@ -210,7 +210,7 @@
             lblNguoiDung.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNguoiDung.Location = new Point(228, 58);
             lblNguoiDung.Name = "lblNguoiDung";
-            lblNguoiDung.Size = new Size(0, 21);
+            lblNguoiDung.Size = new Size(0, 28);
             lblNguoiDung.TabIndex = 1;
             // 
             // lblTieuDe
@@ -219,7 +219,7 @@
             lblTieuDe.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTieuDe.Location = new Point(6, 40);
             lblTieuDe.Name = "lblTieuDe";
-            lblTieuDe.Size = new Size(216, 30);
+            lblTieuDe.Size = new Size(276, 37);
             lblTieuDe.TabIndex = 0;
             lblTieuDe.Text = "Tổng quan hệ thống";
             // 
@@ -234,7 +234,7 @@
             // 
             // frm_UI_Chinh
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 496);
             Controls.Add(panel3);
