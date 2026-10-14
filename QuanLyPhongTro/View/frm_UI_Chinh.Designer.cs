@@ -30,8 +30,6 @@
         {
             panel_menu = new Panel();
             btn_QLYTaiKhoan = new Button();
-            btnThongKe = new Button();
-            btnNhanVien = new Button();
             btnThanhToan = new Button();
             btnHoaDon = new Button();
             btnHopDong = new Button();
@@ -51,8 +49,6 @@
             // 
             panel_menu.BackColor = Color.DarkBlue;
             panel_menu.Controls.Add(btn_QLYTaiKhoan);
-            panel_menu.Controls.Add(btnThongKe);
-            panel_menu.Controls.Add(btnNhanVien);
             panel_menu.Controls.Add(btnThanhToan);
             panel_menu.Controls.Add(btnHoaDon);
             panel_menu.Controls.Add(btnHopDong);
@@ -63,45 +59,22 @@
             panel_menu.Dock = DockStyle.Left;
             panel_menu.Location = new Point(0, 0);
             panel_menu.Name = "panel_menu";
-            panel_menu.Size = new Size(217, 560);
+            panel_menu.Size = new Size(217, 581);
             panel_menu.TabIndex = 0;
+            panel_menu.Paint += panel_menu_Paint;
             // 
             // btn_QLYTaiKhoan
             // 
             btn_QLYTaiKhoan.FlatAppearance.BorderSize = 0;
             btn_QLYTaiKhoan.FlatStyle = FlatStyle.Flat;
             btn_QLYTaiKhoan.ForeColor = Color.White;
-            btn_QLYTaiKhoan.Location = new Point(-10, 444);
+            btn_QLYTaiKhoan.Location = new Point(0, 346);
             btn_QLYTaiKhoan.Name = "btn_QLYTaiKhoan";
             btn_QLYTaiKhoan.Size = new Size(232, 45);
             btn_QLYTaiKhoan.TabIndex = 9;
             btn_QLYTaiKhoan.Text = "Quản Lý Tài Khoản";
             btn_QLYTaiKhoan.UseVisualStyleBackColor = true;
             btn_QLYTaiKhoan.Click += btn_QLYTaiKhoan_Click;
-            // 
-            // btnThongKe
-            // 
-            btnThongKe.FlatAppearance.BorderSize = 0;
-            btnThongKe.FlatStyle = FlatStyle.Flat;
-            btnThongKe.ForeColor = Color.White;
-            btnThongKe.Location = new Point(-10, 397);
-            btnThongKe.Name = "btnThongKe";
-            btnThongKe.Size = new Size(232, 45);
-            btnThongKe.TabIndex = 8;
-            btnThongKe.Text = "Thống kê";
-            btnThongKe.UseVisualStyleBackColor = true;
-            // 
-            // btnNhanVien
-            // 
-            btnNhanVien.FlatAppearance.BorderSize = 0;
-            btnNhanVien.FlatStyle = FlatStyle.Flat;
-            btnNhanVien.ForeColor = Color.White;
-            btnNhanVien.Location = new Point(-10, 346);
-            btnNhanVien.Name = "btnNhanVien";
-            btnNhanVien.Size = new Size(232, 45);
-            btnNhanVien.TabIndex = 7;
-            btnNhanVien.Text = "Nhân viên";
-            btnNhanVien.UseVisualStyleBackColor = true;
             // 
             // btnThanhToan
             // 
@@ -153,6 +126,7 @@
             btnKhachThue.TabIndex = 3;
             btnKhachThue.Text = "Khách thuê";
             btnKhachThue.UseVisualStyleBackColor = true;
+            btnKhachThue.Click += btnKhachThue_Click;
             // 
             // btnPhong
             // 
@@ -201,7 +175,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(217, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(726, 85);
+            panel2.Size = new Size(776, 85);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -230,14 +204,14 @@
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(217, 85);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(726, 475);
+            pnlContent.Size = new Size(776, 496);
             pnlContent.TabIndex = 2;
             // 
             // frm_UI_Chinh
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(943, 560);
+            ClientSize = new Size(993, 581);
             Controls.Add(pnlContent);
             Controls.Add(panel2);
             Controls.Add(panel_menu);
@@ -258,8 +232,6 @@
         private Label lbl_logo;
         private Panel panel2;
         private Panel pnlContent;
-        private Button btnThongKe;
-        private Button btnNhanVien;
         private Button btnThanhToan;
         private Button btnHoaDon;
         private Button btnHopDong;

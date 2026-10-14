@@ -29,7 +29,7 @@
     <Compile Update="View\frm_ThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\frm_ThongKe.cs">
+    <Compile Update="View\frm_TongQuan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_UI_Chinh.cs">

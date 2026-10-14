@@ -83,6 +83,36 @@ namespace QuanLyPhongTro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bed_bed_room_sleep_furniture_icon_124423 {
+            get {
+                object obj = ResourceManager.GetObject("bed_bed_room_sleep_furniture_icon_124423", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bed_bed_room_sleep_furniture_icon_124423__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bed_bed_room_sleep_furniture_icon_124423 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bed_bed_room_sleep_furniture_icon_124423__2_ {
+            get {
+                object obj = ResourceManager.GetObject("bed_bed_room_sleep_furniture_icon_124423 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap build_24dp_000000_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("build_24dp_000000_FILL0_wght400_GRAD0_opsz24", resourceCulture);
@@ -113,6 +143,26 @@ namespace QuanLyPhongTro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap money_pig_icon_icons_com_56372 {
+            get {
+                object obj = ResourceManager.GetObject("money-pig_icon-icons.com_56372", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap msn_user_avatar_person_people_icon_124220 {
+            get {
+                object obj = ResourceManager.GetObject("msn_user_avatar_person_people_icon_124220", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nâu_Be_Hình_Vẽ_Những_Chú_Mèo_Dễ_Thương_Hình_Nền_Máy_Tính_Đơn_Giản {
             get {
                 object obj = ResourceManager.GetObject("Nâu Be Hình Vẽ Những Chú Mèo Dễ Thương Hình Nền Máy Tính Đơn Giản", resourceCulture);
@@ -136,6 +186,16 @@ namespace QuanLyPhongTro.Properties {
         internal static System.Drawing.Bitmap reset_wrench_24dp_EA3323_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("reset_wrench_24dp_EA3323_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap room_icon_144154 {
+            get {
+                object obj = ResourceManager.GetObject("room_icon_144154", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +236,16 @@ namespace QuanLyPhongTro.Properties {
         internal static System.Drawing.Bitmap This_Facebook_Account_Collects_Work_Memes__Here_Are_30_Of_The_Funniest {
             get {
                 object obj = ResourceManager.GetObject("This Facebook Account Collects Work Memes, Here Are 30 Of The Funniest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_people_workers_customers_icon_124243 {
+            get {
+                object obj = ResourceManager.GetObject("users_people_workers_customers_icon_124243", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
