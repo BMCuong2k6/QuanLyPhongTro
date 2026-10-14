@@ -43,19 +43,23 @@
             // txt_TaiKhoan
             // 
             txt_TaiKhoan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txt_TaiKhoan.Location = new Point(163, 83);
+            txt_TaiKhoan.Location = new Point(186, 111);
+            txt_TaiKhoan.Margin = new Padding(3, 4, 3, 4);
             txt_TaiKhoan.Name = "txt_TaiKhoan";
-            txt_TaiKhoan.Size = new Size(123, 23);
+            txt_TaiKhoan.Size = new Size(140, 27);
             txt_TaiKhoan.TabIndex = 0;
+            txt_TaiKhoan.Text = "admin";
             txt_TaiKhoan.TextChanged += txt_TaiKhoan_TextChanged;
             // 
             // txt_MatKhau
             // 
             txt_MatKhau.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txt_MatKhau.Location = new Point(163, 121);
+            txt_MatKhau.Location = new Point(186, 161);
+            txt_MatKhau.Margin = new Padding(3, 4, 3, 4);
             txt_MatKhau.Name = "txt_MatKhau";
-            txt_MatKhau.Size = new Size(123, 23);
+            txt_MatKhau.Size = new Size(140, 27);
             txt_MatKhau.TabIndex = 1;
+            txt_MatKhau.Text = "123456";
             txt_MatKhau.UseSystemPasswordChar = true;
             txt_MatKhau.TextChanged += textBox2_TextChanged;
             // 
@@ -64,9 +68,9 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(81, 81);
+            label1.Location = new Point(93, 108);
             label1.Name = "label1";
-            label1.Size = new Size(76, 21);
+            label1.Size = new Size(96, 28);
             label1.TabIndex = 2;
             label1.Text = "Tài Khoản";
             label1.Click += label1_Click;
@@ -76,9 +80,9 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(81, 119);
+            label2.Location = new Point(93, 159);
             label2.Name = "label2";
-            label2.Size = new Size(76, 21);
+            label2.Size = new Size(96, 28);
             label2.TabIndex = 3;
             label2.Text = "Mật Khẩu";
             label2.Click += label2_Click;
@@ -86,9 +90,10 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Location = new Point(141, 232);
+            button1.Location = new Point(161, 309);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(90, 36);
+            button1.Size = new Size(103, 48);
             button1.TabIndex = 5;
             button1.Text = "Đăng Nhập";
             button1.UseVisualStyleBackColor = true;
@@ -97,9 +102,10 @@
             // checkB_HienMK
             // 
             checkB_HienMK.AutoSize = true;
-            checkB_HienMK.Location = new Point(81, 150);
+            checkB_HienMK.Location = new Point(93, 200);
+            checkB_HienMK.Margin = new Padding(3, 4, 3, 4);
             checkB_HienMK.Name = "checkB_HienMK";
-            checkB_HienMK.Size = new Size(105, 19);
+            checkB_HienMK.Size = new Size(129, 24);
             checkB_HienMK.TabIndex = 6;
             checkB_HienMK.Text = "Hiện Mật Khẩu";
             checkB_HienMK.UseVisualStyleBackColor = true;
@@ -108,9 +114,9 @@
             // linkLbl_QuenMK
             // 
             linkLbl_QuenMK.AutoSize = true;
-            linkLbl_QuenMK.Location = new Point(250, 313);
+            linkLbl_QuenMK.Location = new Point(286, 417);
             linkLbl_QuenMK.Name = "linkLbl_QuenMK";
-            linkLbl_QuenMK.Size = new Size(95, 15);
+            linkLbl_QuenMK.Size = new Size(118, 20);
             linkLbl_QuenMK.TabIndex = 7;
             linkLbl_QuenMK.TabStop = true;
             linkLbl_QuenMK.Text = "Quên Mật Khẩu?";
@@ -121,18 +127,18 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.DodgerBlue;
-            label3.Location = new Point(132, 9);
+            label3.Location = new Point(151, 12);
             label3.Name = "label3";
-            label3.Size = new Size(108, 25);
+            label3.Size = new Size(136, 32);
             label3.TabIndex = 8;
             label3.Text = "Đăng Nhập";
             // 
             // linkLbl_DKTK
             // 
             linkLbl_DKTK.AutoSize = true;
-            linkLbl_DKTK.Location = new Point(12, 313);
+            linkLbl_DKTK.Location = new Point(14, 417);
             linkLbl_DKTK.Name = "linkLbl_DKTK";
-            linkLbl_DKTK.Size = new Size(104, 15);
+            linkLbl_DKTK.Size = new Size(132, 20);
             linkLbl_DKTK.TabIndex = 9;
             linkLbl_DKTK.TabStop = true;
             linkLbl_DKTK.Text = "Đăng Ký Tài Khoản";
@@ -140,9 +146,9 @@
             // 
             // frm_DangNhap
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 337);
+            ClientSize = new Size(408, 449);
             Controls.Add(linkLbl_DKTK);
             Controls.Add(label3);
             Controls.Add(linkLbl_QuenMK);
@@ -154,6 +160,7 @@
             Controls.Add(txt_TaiKhoan);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "frm_DangNhap";
             Text = "Đăng Nhập";

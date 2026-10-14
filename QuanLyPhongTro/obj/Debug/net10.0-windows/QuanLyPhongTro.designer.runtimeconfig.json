@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\TRUONG\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\TRUONG\\.nuget\\packages"
+      "C:\\Users\\ADMINN\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ADMINN\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
