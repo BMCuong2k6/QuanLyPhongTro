@@ -41,12 +41,14 @@
             label5 = new Label();
             label6 = new Label();
             txtHd = new TextBox();
-            txtNtt = new TextBox();
             txtMtt = new TextBox();
             txtSt = new TextBox();
             cbPt = new ComboBox();
             cbTt = new ComboBox();
             label1 = new Label();
+            btnLamMoi = new Button();
+            dtpNtt = new DateTimePicker();
+            btnTraCuu = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvThanhtoan).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             btnThem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThem.Image = Properties.Resources.add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(12, 342);
+            btnThem.Location = new Point(12, 287);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 0;
@@ -70,7 +72,7 @@
             btnSua.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSua.Image = Properties.Resources.build_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnSua.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSua.Location = new Point(12, 377);
+            btnSua.Location = new Point(12, 322);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 1;
@@ -84,7 +86,7 @@
             btnXoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXoa.Image = (Image)resources.GetObject("btnXoa.Image");
             btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXoa.Location = new Point(278, 342);
+            btnXoa.Location = new Point(12, 357);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 2;
@@ -99,7 +101,7 @@
             btnthoat.ForeColor = Color.Red;
             btnthoat.Image = Properties.Resources.tab_close_right_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnthoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnthoat.Location = new Point(278, 377);
+            btnthoat.Location = new Point(408, 389);
             btnthoat.Name = "btnthoat";
             btnthoat.Size = new Size(134, 29);
             btnthoat.TabIndex = 3;
@@ -146,7 +148,7 @@
             lbl_Ntt.AutoSize = true;
             lbl_Ntt.BackColor = Color.Transparent;
             lbl_Ntt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Ntt.Location = new Point(331, 194);
+            lbl_Ntt.Location = new Point(340, 194);
             lbl_Ntt.Name = "lbl_Ntt";
             lbl_Ntt.Size = new Size(132, 20);
             lbl_Ntt.TabIndex = 7;
@@ -157,7 +159,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(48, 194);
+            label4.Location = new Point(12, 194);
             label4.Name = "label4";
             label4.Size = new Size(60, 20);
             label4.TabIndex = 8;
@@ -179,7 +181,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(305, 148);
+            label6.Location = new Point(291, 148);
             label6.Name = "label6";
             label6.Size = new Size(83, 20);
             label6.TabIndex = 10;
@@ -192,13 +194,6 @@
             txtHd.Size = new Size(152, 27);
             txtHd.TabIndex = 11;
             // 
-            // txtNtt
-            // 
-            txtNtt.Location = new Point(129, 194);
-            txtNtt.Name = "txtNtt";
-            txtNtt.Size = new Size(152, 27);
-            txtNtt.TabIndex = 12;
-            // 
             // txtMtt
             // 
             txtMtt.Location = new Point(129, 99);
@@ -208,7 +203,7 @@
             // 
             // txtSt
             // 
-            txtSt.Location = new Point(320, 217);
+            txtSt.Location = new Point(129, 191);
             txtSt.Name = "txtSt";
             txtSt.Size = new Size(152, 27);
             txtSt.TabIndex = 14;
@@ -242,6 +237,40 @@
             label1.TabIndex = 17;
             label1.Text = "THANH TOÁN";
             // 
+            // btnLamMoi
+            // 
+            btnLamMoi.BackColor = Color.FromArgb(255, 255, 192);
+            btnLamMoi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLamMoi.ForeColor = SystemColors.ControlText;
+            btnLamMoi.Image = Properties.Resources.reset_wrench_24dp_EA3323_FILL0_wght400_GRAD0_opsz24;
+            btnLamMoi.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLamMoi.Location = new Point(408, 354);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(134, 29);
+            btnLamMoi.TabIndex = 18;
+            btnLamMoi.Text = "Làm Mới";
+            btnLamMoi.UseVisualStyleBackColor = false;
+            btnLamMoi.Click += btnLamMoi_Click;
+            // 
+            // dtpNtt
+            // 
+            dtpNtt.Location = new Point(292, 217);
+            dtpNtt.Name = "dtpNtt";
+            dtpNtt.Size = new Size(250, 27);
+            dtpNtt.TabIndex = 19;
+            // 
+            // btnTraCuu
+            // 
+            btnTraCuu.BackColor = Color.FromArgb(255, 255, 192);
+            btnTraCuu.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTraCuu.Location = new Point(424, 313);
+            btnTraCuu.Name = "btnTraCuu";
+            btnTraCuu.Size = new Size(94, 29);
+            btnTraCuu.TabIndex = 20;
+            btnTraCuu.Text = "Tra Cứu";
+            btnTraCuu.UseVisualStyleBackColor = false;
+            btnTraCuu.Click += btnTraCuu_Click;
+            // 
             // frm_ThanhToan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -249,12 +278,14 @@
             BackgroundImage = Properties.Resources.ok;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1253, 501);
+            Controls.Add(btnTraCuu);
+            Controls.Add(dtpNtt);
+            Controls.Add(btnLamMoi);
             Controls.Add(label1);
             Controls.Add(cbTt);
             Controls.Add(cbPt);
             Controls.Add(txtSt);
             Controls.Add(txtMtt);
-            Controls.Add(txtNtt);
             Controls.Add(txtHd);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -289,11 +320,13 @@
         private Label label5;
         private Label label6;
         private TextBox txtHd;
-        private TextBox txtNtt;
         private TextBox txtMtt;
         private TextBox txtSt;
         private ComboBox cbPt;
         private ComboBox cbTt;
         private Label label1;
+        private Button btnLamMoi;
+        private DateTimePicker dtpNtt;
+        private Button btnTraCuu;
     }
 }

@@ -274,7 +274,7 @@
             pictureBox1.Image = Properties.Resources.This_Facebook_Account_Collects_Work_Memes__Here_Are_30_Of_The_Funniest;
             pictureBox1.Location = new Point(880, 136);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(419, 477);
+            pictureBox1.Size = new Size(419, 385);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;

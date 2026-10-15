@@ -15,6 +15,7 @@ namespace QuanLyPhongTro.View
         {
             InitializeComponent();
             LoadThanhToan();
+            ResetForm();
         }
         public void LoadThanhToan()
         {
@@ -147,40 +148,76 @@ namespace QuanLyPhongTro.View
 
                 txtMtt.Text = row.Cells[0].Value.ToString();
                 txtHd.Text = row.Cells[1].Value.ToString();
-                txtNtt.Text = row.Cells[2].Value.ToString();
+                dtpNtt.Text = row.Cells[2].Value.ToString();
                 txtSt.Text = row.Cells[3].Value.ToString();
                 cbPt.Text = row.Cells[4].Value.ToString();
                 cbTt.Text = row.Cells[5].Value.ToString();
             }
-            else
-            {
-                // Bấm vào vùng trống bên dưới -> Xóa trắng các ô để nhập mới
-                txtMtt.Clear();
-                txtNtt.Clear();
-                txtHd.Clear();
-                txtSt.Clear();
-                cbPt.SelectedIndex = -1; // Hoặc .Text = "";
-                cbTt.SelectedIndex = -1;
 
-                // Hoặc có thể tự động sinh mã mới nếu ông thích
-            }
         }
 
         private void dgvThanhtoan_MouseClick(object sender, MouseEventArgs e)
         {
-            DataGridView.HitTestInfo hit = dgvThanhtoan.HitTest(e.X, e.Y);
 
-            // Nếu click vào vùng trống bên dưới bảng
-            if (hit.Type == DataGridViewHitTestType.None || hit.RowIndex < 0)
+
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+            LoadThanhToan();
+        }
+        private void ResetForm()
+        {
+            txtMtt.Clear();
+            txtHd.Clear(); // Hoặc tên ô mã hóa đơn tương ứng
+
+            // Nếu ngày thanh toán dùng DateTimePicker
+            dtpNtt.Value = DateTime.Now;
+
+            txtSt.Clear();
+
+            // Reset các ComboBox phương thức và trạng thái
+            cbPt.SelectedIndex = -1;
+            cbTt.SelectedIndex = -1;
+
+            // Mở khóa ô mã thanh toán để sẵn sàng thêm mới
+            txtMtt.ReadOnly = false;
+            txtMtt.Focus();
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            string maCanTim = txtHd.Text.Trim(); // Hoặc tên ô textbox nhập mã thanh toán/mã hóa đơn của ông
+
+            if (string.IsNullOrEmpty(maCanTim))
             {
-                txtMtt.Clear();
-                txtHd.Clear();
-                txtSt.Clear();
-                txtNtt.Clear();
-                cbPt.SelectedIndex = -1;
-                cbTt.SelectedIndex = -1;
+                MessageBox.Show("Vui lòng nhập mã cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHd.Focus();
+                return;
+            }
 
-                txtMtt.Focus();
+            try
+            {
+                // 1. Đổi sang gọi DAO của Thanh Toán thay vì Hóa Đơn
+                DataTable dt = DAO_Thanhtoan_truong.GetData(); // (Đổi tên DAO này thành đúng tên DAO của bảng thanh toán bên ông)
+                DataView dv = dt.DefaultView;
+
+                // 2. Lọc theo đúng cột của bảng Thanh Toán (ví dụ lọc theo MaThanhToan hoặc MaHoaDon)
+                dv.RowFilter = $"MaHoaDon LIKE '%{maCanTim}%'";
+
+                // 3. Đổ dữ liệu vào đúng cái bảng (DataGridView) của form Thanh Toán
+                dgvThanhtoan.DataSource = dv.ToTable();
+
+                if (dv.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadThanhToan(); // Gọi lại hàm load danh sách thanh toán gốc của form này
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
