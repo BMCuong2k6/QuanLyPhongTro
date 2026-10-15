@@ -44,14 +44,13 @@
             txtTienDien = new TextBox();
             txtTienNuoc = new TextBox();
             txtTienDichVu = new TextBox();
-            cbMaHD = new ComboBox();
             cbTrangThai = new ComboBox();
             dgvHoaDon = new DataGridView();
             btnSua = new Button();
             btnXoa = new Button();
-            btnThoat = new Button();
             btnThem = new Button();
-            label1 = new Label();
+            btnLamMoi = new Button();
+            txtMhd = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvHoaDon).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +59,7 @@
             lbl_MaHD.AutoSize = true;
             lbl_MaHD.BackColor = Color.Transparent;
             lbl_MaHD.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_MaHD.Location = new Point(14, 99);
+            lbl_MaHD.Location = new Point(179, 102);
             lbl_MaHD.Name = "lbl_MaHD";
             lbl_MaHD.Size = new Size(96, 20);
             lbl_MaHD.TabIndex = 0;
@@ -71,7 +70,7 @@
             lbl_MaHopDong.AutoSize = true;
             lbl_MaHopDong.BackColor = Color.Transparent;
             lbl_MaHopDong.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_MaHopDong.Location = new Point(14, 133);
+            lbl_MaHopDong.Location = new Point(179, 151);
             lbl_MaHopDong.Name = "lbl_MaHopDong";
             lbl_MaHopDong.Size = new Size(106, 20);
             lbl_MaHopDong.TabIndex = 1;
@@ -82,7 +81,7 @@
             lbl_Thang.AutoSize = true;
             lbl_Thang.BackColor = Color.Transparent;
             lbl_Thang.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Thang.Location = new Point(14, 166);
+            lbl_Thang.Location = new Point(179, 189);
             lbl_Thang.Name = "lbl_Thang";
             lbl_Thang.Size = new Size(53, 20);
             lbl_Thang.TabIndex = 2;
@@ -93,7 +92,7 @@
             lbl_Nam.AutoSize = true;
             lbl_Nam.BackColor = Color.Transparent;
             lbl_Nam.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Nam.Location = new Point(14, 199);
+            lbl_Nam.Location = new Point(179, 235);
             lbl_Nam.Name = "lbl_Nam";
             lbl_Nam.Size = new Size(43, 20);
             lbl_Nam.TabIndex = 3;
@@ -104,7 +103,7 @@
             lbl_Tp.AutoSize = true;
             lbl_Tp.BackColor = Color.Transparent;
             lbl_Tp.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Tp.Location = new Point(358, 95);
+            lbl_Tp.Location = new Point(529, 50);
             lbl_Tp.Name = "lbl_Tp";
             lbl_Tp.Size = new Size(88, 20);
             lbl_Tp.TabIndex = 4;
@@ -115,7 +114,7 @@
             lbl_Td.AutoSize = true;
             lbl_Td.BackColor = Color.Transparent;
             lbl_Td.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Td.Location = new Point(358, 133);
+            lbl_Td.Location = new Point(529, 105);
             lbl_Td.Name = "lbl_Td";
             lbl_Td.Size = new Size(75, 20);
             lbl_Td.TabIndex = 5;
@@ -126,7 +125,7 @@
             lbl_Tn.AutoSize = true;
             lbl_Tn.BackColor = Color.Transparent;
             lbl_Tn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Tn.Location = new Point(358, 170);
+            lbl_Tn.Location = new Point(529, 161);
             lbl_Tn.Name = "lbl_Tn";
             lbl_Tn.Size = new Size(81, 20);
             lbl_Tn.TabIndex = 6;
@@ -137,7 +136,7 @@
             lbl_Tdv.AutoSize = true;
             lbl_Tdv.BackColor = Color.Transparent;
             lbl_Tdv.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Tdv.Location = new Point(358, 207);
+            lbl_Tdv.Location = new Point(529, 214);
             lbl_Tdv.Name = "lbl_Tdv";
             lbl_Tdv.Size = new Size(97, 20);
             lbl_Tdv.TabIndex = 7;
@@ -148,7 +147,7 @@
             lbl_Tt.AutoSize = true;
             lbl_Tt.BackColor = Color.Transparent;
             lbl_Tt.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbl_Tt.Location = new Point(14, 237);
+            lbl_Tt.Location = new Point(179, 58);
             lbl_Tt.Name = "lbl_Tt";
             lbl_Tt.Size = new Size(83, 20);
             lbl_Tt.TabIndex = 8;
@@ -156,7 +155,7 @@
             // 
             // txtMaHoaDon
             // 
-            txtMaHoaDon.Location = new Point(126, 95);
+            txtMaHoaDon.Location = new Point(325, 95);
             txtMaHoaDon.Name = "txtMaHoaDon";
             txtMaHoaDon.Size = new Size(181, 27);
             txtMaHoaDon.TabIndex = 9;
@@ -164,71 +163,63 @@
             // 
             // txtThang
             // 
-            txtThang.Location = new Point(126, 159);
+            txtThang.Location = new Point(325, 182);
             txtThang.Name = "txtThang";
             txtThang.Size = new Size(181, 27);
             txtThang.TabIndex = 10;
             // 
             // txtNam
             // 
-            txtNam.Location = new Point(126, 196);
+            txtNam.Location = new Point(325, 228);
             txtNam.Name = "txtNam";
             txtNam.Size = new Size(181, 27);
             txtNam.TabIndex = 11;
             // 
             // txtTienPhong
             // 
-            txtTienPhong.Location = new Point(461, 92);
+            txtTienPhong.Location = new Point(644, 50);
             txtTienPhong.Name = "txtTienPhong";
-            txtTienPhong.Size = new Size(125, 27);
+            txtTienPhong.Size = new Size(148, 27);
             txtTienPhong.TabIndex = 12;
             // 
             // txtTienDien
             // 
-            txtTienDien.Location = new Point(461, 126);
+            txtTienDien.Location = new Point(644, 98);
             txtTienDien.Name = "txtTienDien";
-            txtTienDien.Size = new Size(125, 27);
+            txtTienDien.Size = new Size(148, 27);
             txtTienDien.TabIndex = 13;
             // 
             // txtTienNuoc
             // 
-            txtTienNuoc.Location = new Point(461, 163);
+            txtTienNuoc.Location = new Point(644, 154);
             txtTienNuoc.Name = "txtTienNuoc";
-            txtTienNuoc.Size = new Size(125, 27);
+            txtTienNuoc.Size = new Size(148, 27);
             txtTienNuoc.TabIndex = 14;
             // 
             // txtTienDichVu
             // 
-            txtTienDichVu.Location = new Point(461, 199);
+            txtTienDichVu.Location = new Point(644, 207);
             txtTienDichVu.Name = "txtTienDichVu";
-            txtTienDichVu.Size = new Size(125, 27);
+            txtTienDichVu.Size = new Size(148, 27);
             txtTienDichVu.TabIndex = 15;
-            // 
-            // cbMaHD
-            // 
-            cbMaHD.FormattingEnabled = true;
-            cbMaHD.Location = new Point(126, 125);
-            cbMaHD.Name = "cbMaHD";
-            cbMaHD.Size = new Size(181, 28);
-            cbMaHD.TabIndex = 16;
             // 
             // cbTrangThai
             // 
             cbTrangThai.FormattingEnabled = true;
             cbTrangThai.Items.AddRange(new object[] { "Đã thanh toán", "Chưa thanh toán", "Thanh toán một phần" });
-            cbTrangThai.Location = new Point(126, 229);
+            cbTrangThai.Location = new Point(325, 50);
             cbTrangThai.Name = "cbTrangThai";
-            cbTrangThai.Size = new Size(151, 28);
+            cbTrangThai.Size = new Size(181, 28);
             cbTrangThai.TabIndex = 17;
             // 
             // dgvHoaDon
             // 
             dgvHoaDon.BackgroundColor = Color.White;
             dgvHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHoaDon.Location = new Point(1, 362);
+            dgvHoaDon.Location = new Point(12, 397);
             dgvHoaDon.Name = "dgvHoaDon";
             dgvHoaDon.RowHeadersWidth = 51;
-            dgvHoaDon.Size = new Size(947, 212);
+            dgvHoaDon.Size = new Size(929, 212);
             dgvHoaDon.TabIndex = 18;
             dgvHoaDon.CellContentClick += dgvHoaDon_CellContentClick;
             dgvHoaDon.MouseClick += dgvHoaDon_MouseClick;
@@ -238,7 +229,7 @@
             btnSua.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSua.Image = Properties.Resources.build_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnSua.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSua.Location = new Point(159, 580);
+            btnSua.Location = new Point(112, 362);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 19;
@@ -251,7 +242,7 @@
             btnXoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnXoa.Image = Properties.Resources.delete_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXoa.Location = new Point(302, 580);
+            btnXoa.Location = new Point(212, 362);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 20;
@@ -259,26 +250,12 @@
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += btnXoa_Click;
             // 
-            // btnThoat
-            // 
-            btnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnThoat.ForeColor = Color.Red;
-            btnThoat.Image = Properties.Resources.tab_close_right_24dp_000000_FILL0_wght400_GRAD0_opsz24;
-            btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(816, 580);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(119, 29);
-            btnThoat.TabIndex = 21;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
-            // 
             // btnThem
             // 
             btnThem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnThem.Image = Properties.Resources.add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(19, 580);
+            btnThem.Location = new Point(12, 362);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 22;
@@ -286,17 +263,25 @@
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
             // 
-            // label1
+            // btnLamMoi
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(209, 46);
-            label1.TabIndex = 23;
-            label1.Text = "HÓA ĐƠN";
-            label1.Click += label1_Click;
+            btnLamMoi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLamMoi.Image = Properties.Resources.reset_wrench_24dp_EA3323_FILL0_wght400_GRAD0_opsz24;
+            btnLamMoi.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLamMoi.Location = new Point(812, 362);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(129, 29);
+            btnLamMoi.TabIndex = 23;
+            btnLamMoi.Text = "Làm Mới";
+            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
+            // 
+            // txtMhd
+            // 
+            txtMhd.Location = new Point(325, 144);
+            txtMhd.Name = "txtMhd";
+            txtMhd.Size = new Size(181, 27);
+            txtMhd.TabIndex = 24;
             // 
             // frm_HoaDontruong
             // 
@@ -304,15 +289,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Nâu_Be_Hình_Vẽ_Những_Chú_Mèo_Dễ_Thương_Hình_Nền_Máy_Tính_Đơn_Giản;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(947, 621);
-            Controls.Add(label1);
+            ClientSize = new Size(953, 621);
+            Controls.Add(txtMhd);
+            Controls.Add(btnLamMoi);
             Controls.Add(btnThem);
-            Controls.Add(btnThoat);
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
             Controls.Add(dgvHoaDon);
             Controls.Add(cbTrangThai);
-            Controls.Add(cbMaHD);
             Controls.Add(txtTienDichVu);
             Controls.Add(txtTienNuoc);
             Controls.Add(txtTienDien);
@@ -355,13 +339,12 @@
         private TextBox txtTienDien;
         private TextBox txtTienNuoc;
         private TextBox txtTienDichVu;
-        private ComboBox cbMaHD;
         private ComboBox cbTrangThai;
         private DataGridView dgvHoaDon;
         private Button btnSua;
         private Button btnXoa;
-        private Button btnThoat;
         private Button btnThem;
-        private Label label1;
+        private Button btnLamMoi;
+        private TextBox txtMhd;
     }
 }

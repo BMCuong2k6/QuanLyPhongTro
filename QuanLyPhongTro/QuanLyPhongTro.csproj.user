@@ -5,6 +5,9 @@
     <Compile Update="View\frm_DangKyTK.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\frm_HoaDontruong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\frm_HopDong_Truong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12,9 +15,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_LoaiPhong_Quan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\frm_HoaDontruong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_DangNhap.cs">

@@ -24,29 +24,30 @@ namespace QuanLyPhongTro
         {
             // ComboBox loại phòng
             comboBox2.Items.Clear();
-            comboBox2.Items.Add("Phòng đơn");
-            comboBox2.Items.Add("Phòng đôi");
+            comboBox2.Items.Add("Phòng đơn cơ bản");
+            comboBox2.Items.Add("Phòng đôi có gác");
+            comboBox2.Items.Add("Phòng cao cấp");
 
 
             // ComboBox trạng thái
             comboBox1.Items.Clear();
             comboBox1.Items.Add("Trống");
             comboBox1.Items.Add("Đang thuê");
-            comboBox1.Items.Add("Đang sửa");
+            comboBox1.Items.Add("Bảo Trì");
             // ComboBox lọc trạng thái
             comboBox3.Items.Clear();
 
             comboBox3.Items.Add("Tất cả");
             comboBox3.Items.Add("Trống");
             comboBox3.Items.Add("Đang thuê");
-            comboBox3.Items.Add("Đang sửa");
+            comboBox3.Items.Add("Bảo Trì");
 
             comboBox3.SelectedIndex = 0;
             comboBox4.Items.Clear();
 
             comboBox4.Items.Add("Trống");
             comboBox4.Items.Add("Đang thuê");
-            comboBox4.Items.Add("Đang sửa");
+            comboBox4.Items.Add("Bảo Trì");
 
             comboBox4.SelectedIndex = -1;
 
@@ -551,11 +552,12 @@ namespace QuanLyPhongTro
             }
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
 
 
 
-           

@@ -58,10 +58,10 @@
             // 
             dgvHopDong.BackgroundColor = Color.White;
             dgvHopDong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHopDong.Location = new Point(-3, 257);
+            dgvHopDong.Location = new Point(-1, 198);
             dgvHopDong.Name = "dgvHopDong";
             dgvHopDong.RowHeadersWidth = 51;
-            dgvHopDong.Size = new Size(638, 264);
+            dgvHopDong.Size = new Size(629, 385);
             dgvHopDong.TabIndex = 0;
             dgvHopDong.CellContentClick += dgvHopDong_CellContentClick;
             // 
@@ -114,7 +114,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 128);
+            label5.Location = new Point(38, 131);
             label5.Name = "label5";
             label5.Size = new Size(83, 20);
             label5.TabIndex = 5;
@@ -174,7 +174,7 @@
             // 
             cbTt.FormattingEnabled = true;
             cbTt.Items.AddRange(new object[] { "Đang Thuê", "Đã Kết THúc" });
-            cbTt.Location = new Point(126, 125);
+            cbTt.Location = new Point(126, 123);
             cbTt.Name = "cbTt";
             cbTt.Size = new Size(151, 28);
             cbTt.TabIndex = 14;
@@ -198,7 +198,7 @@
             btnThem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnThem.Image = Properties.Resources.add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(12, 541);
+            btnThem.Location = new Point(-1, 589);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 17;
@@ -211,7 +211,7 @@
             btnSua.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSua.Image = Properties.Resources.build_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnSua.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSua.Location = new Point(126, 541);
+            btnSua.Location = new Point(113, 589);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 18;
@@ -224,7 +224,7 @@
             btnXoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnXoa.Image = Properties.Resources.delete_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXoa.Location = new Point(241, 541);
+            btnXoa.Location = new Point(228, 589);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 19;
@@ -237,7 +237,7 @@
             btnthoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnthoat.Image = Properties.Resources.tab_close_right_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             btnthoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnthoat.Location = new Point(716, 541);
+            btnthoat.Location = new Point(842, 589);
             btnthoat.Name = "btnthoat";
             btnthoat.Size = new Size(109, 29);
             btnthoat.TabIndex = 20;
@@ -250,7 +250,7 @@
             btnLammoi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnLammoi.Image = Properties.Resources.reset_wrench_24dp_EA3323_FILL0_wght400_GRAD0_opsz24;
             btnLammoi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLammoi.Location = new Point(350, 541);
+            btnLammoi.Location = new Point(337, 589);
             btnLammoi.Name = "btnLammoi";
             btnLammoi.Size = new Size(128, 29);
             btnLammoi.TabIndex = 21;
@@ -263,7 +263,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(992, 79);
+            label8.Location = new Point(684, 132);
             label8.Name = "label8";
             label8.Size = new Size(241, 54);
             label8.TabIndex = 22;
@@ -272,9 +272,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.This_Facebook_Account_Collects_Work_Memes__Here_Are_30_Of_The_Funniest;
-            pictureBox1.Location = new Point(655, 119);
+            pictureBox1.Location = new Point(634, 198);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(291, 402);
+            pictureBox1.Size = new Size(317, 385);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -284,7 +284,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tải_xuống__1_;
-            ClientSize = new Size(947, 621);
+            ClientSize = new Size(953, 621);
             Controls.Add(pictureBox1);
             Controls.Add(label8);
             Controls.Add(btnLammoi);
