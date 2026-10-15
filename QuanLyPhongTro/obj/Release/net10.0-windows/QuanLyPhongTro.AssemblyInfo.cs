@@ -14,19 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanLyPhongTro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f6daf887ed593fce5aa5edd57081b0fcfe1e681")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f50554aec10a2ba8ec20d0ee4e25efa0628a570e")]
->>>>>>> ccf82dad861731161fc0f1ca13c679e431990081
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f50554aec10a2ba8ec20d0ee4e25efa0628a570e")]
->>>>>>> ccf82dad861731161fc0f1ca13c679e431990081
-=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccf82dad861731161fc0f1ca13c679e431990081")]
->>>>>>> 8d47d034a55dcad593b974553de498bac54d6b46
 [assembly: System.Reflection.AssemblyProductAttribute("QuanLyPhongTro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanLyPhongTro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -64,7 +64,7 @@ namespace QuanLyPhongTro.DAO
 
         public static int DemTongSoPhong()
         {
-            string query = "SELECT COUNT(*) FROM Phong";
+            string query = "SELECT COUNT(maPhong) FROM Phong";
 
             using (SqlConnection conn = Connection.open())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -75,7 +75,7 @@ namespace QuanLyPhongTro.DAO
 
         public static int DemSoKhachThue()
         {
-            string query = "SELECT COUNT(*) FROM KhachThue";
+            string query = "SELECT COUNT(maNguoiThue) FROM KhachThue";
 
             using (SqlConnection conn = Connection.open())
             using (SqlCommand cmd = new SqlCommand(query, conn))

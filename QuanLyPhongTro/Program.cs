@@ -19,8 +19,7 @@ namespace QuanLyPhongTro
             //Application.Run(new View.ftm_UI_Chinh());
             //Application.Run(new QuanLyPhongTro.View .frm_KhachThue_Quan());
             //Application.Run(new frm_UI_Chinh());
-            //Application.Run(new frm_Phong_Quan());
-            //Application.Run(new frm_KhachThue_Quan());
+
             Application.Run(new View.frm_DangNhap());
 
             

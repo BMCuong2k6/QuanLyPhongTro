@@ -59,7 +59,7 @@
             panel_menu.Dock = DockStyle.Left;
             panel_menu.Location = new Point(0, 0);
             panel_menu.Name = "panel_menu";
-            panel_menu.Size = new Size(217, 581);
+            panel_menu.Size = new Size(211, 753);
             panel_menu.TabIndex = 0;
             panel_menu.Paint += panel_menu_Paint;
             // 
@@ -173,9 +173,9 @@
             panel2.Controls.Add(lblNguoiDung);
             panel2.Controls.Add(lblTieuDe);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(217, 0);
+            panel2.Location = new Point(211, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(776, 85);
+            panel2.Size = new Size(971, 85);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -202,20 +202,21 @@
             // 
             pnlContent.BackColor = SystemColors.AppWorkspace;
             pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(217, 85);
+            pnlContent.Location = new Point(211, 85);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(776, 496);
+            pnlContent.Size = new Size(971, 668);
             pnlContent.TabIndex = 2;
             // 
             // frm_UI_Chinh
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(993, 581);
+            ClientSize = new Size(1182, 753);
             Controls.Add(pnlContent);
             Controls.Add(panel2);
             Controls.Add(panel_menu);
             Font = new Font("Segoe UI", 10F);
+            MaximizeBox = false;
             Name = "frm_UI_Chinh";
             Text = "Quản Lý Phòng Trọ";
             Load += frm_UI_Chinh_Load;

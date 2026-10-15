@@ -58,10 +58,10 @@
             // 
             dgvHopDong.BackgroundColor = Color.White;
             dgvHopDong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHopDong.Location = new Point(12, 136);
+            dgvHopDong.Location = new Point(-3, 257);
             dgvHopDong.Name = "dgvHopDong";
             dgvHopDong.RowHeadersWidth = 51;
-            dgvHopDong.Size = new Size(813, 385);
+            dgvHopDong.Size = new Size(638, 264);
             dgvHopDong.TabIndex = 0;
             dgvHopDong.CellContentClick += dgvHopDong_CellContentClick;
             // 
@@ -114,7 +114,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(842, 47);
+            label5.Location = new Point(12, 128);
             label5.Name = "label5";
             label5.Size = new Size(83, 20);
             label5.TabIndex = 5;
@@ -174,7 +174,7 @@
             // 
             cbTt.FormattingEnabled = true;
             cbTt.Items.AddRange(new object[] { "Đang Thuê", "Đã Kết THúc" });
-            cbTt.Location = new Point(930, 39);
+            cbTt.Location = new Point(126, 125);
             cbTt.Name = "cbTt";
             cbTt.Size = new Size(151, 28);
             cbTt.TabIndex = 14;
@@ -272,9 +272,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.This_Facebook_Account_Collects_Work_Memes__Here_Are_30_Of_The_Funniest;
-            pictureBox1.Location = new Point(880, 136);
+            pictureBox1.Location = new Point(655, 119);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(419, 385);
+            pictureBox1.Size = new Size(291, 402);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -284,7 +284,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tải_xuống__1_;
-            ClientSize = new Size(1323, 613);
+            ClientSize = new Size(947, 621);
             Controls.Add(pictureBox1);
             Controls.Add(label8);
             Controls.Add(btnLammoi);

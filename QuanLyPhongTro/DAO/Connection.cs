@@ -14,37 +14,24 @@ namespace QuanLyPhongTro.DAO
 
         //Trường
 
-<<<<<<< HEAD
         //static string strconn = "server=LAPTOP-F6G2PCU0;" +
-        // "database=QuanLyPhongTro;" +
+        // "database=QLPhongTro;" +
         //  "Integrated Security=True;" +
         // "trustservercertificate=true;";
-=======
-        static string strconn = "server=LAPTOP-F6G2PCU0;" +
-         "database=QLPhongTro;" +
-          "Integrated Security=True;" +
-         "trustservercertificate=true;";
->>>>>>> 8d47d034a55dcad593b974553de498bac54d6b46
 
         //Cường
 
-        //static string strconn = "server=DESKTOP-84UP1KC\\SQLEXPRESS;" +
-<<<<<<< HEAD
-        //  "database=QuanLyPhongTro;" +
-        //  "Integrated Security=True;" +
-        // "trustservercertificate=true;";
-=======
-        //    "database=QLPhongTro;" +
-        //    "Integrated Security=True;" +
-        //    "trustservercertificate=true;";
->>>>>>> 8d47d034a55dcad593b974553de498bac54d6b46
-
-        // quân
-
-        static string strconn = "server=Admin-PC;" +
+        static string strconn = "server=DESKTOP-84UP1KC\\SQLEXPRESS;" +
             "database=QLPhongTro;" +
             "Integrated Security=True;" +
             "trustservercertificate=true;";
+
+        // quân
+
+        //static string strconn = "server=;" +
+        //    "database=QLPhongTro;" +
+        //    "Integrated Security=True;" +
+        //    "trustservercertificate=true;";
 
         static SqlConnection conn = null;
         public static SqlConnection open()

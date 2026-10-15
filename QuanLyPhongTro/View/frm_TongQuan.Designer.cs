@@ -17,9 +17,13 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlTongQuan = new Panel();
+            panel5 = new Panel();
+            lbl_DoanhThu = new Label();
+            pictureBox5 = new PictureBox();
+            label6 = new Label();
             panel4 = new Panel();
             lbl_KhachThue = new Label();
             pictureBox4 = new PictureBox();
@@ -43,11 +47,9 @@
             lblNgayHienTai = new Label();
             lblLoiChao = new Label();
             lblTieuDe = new Label();
-            panel5 = new Panel();
-            lbl_DoanhThu = new Label();
-            pictureBox5 = new PictureBox();
-            label6 = new Label();
             pnlTongQuan.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
@@ -57,8 +59,6 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvHoaDonGanDay).BeginInit();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // pnlTongQuan
@@ -79,8 +79,52 @@
             pnlTongQuan.Dock = DockStyle.Fill;
             pnlTongQuan.Location = new Point(0, 0);
             pnlTongQuan.Name = "pnlTongQuan";
-            pnlTongQuan.Size = new Size(890, 574);
+            pnlTongQuan.Size = new Size(965, 668);
             pnlTongQuan.TabIndex = 0;
+            pnlTongQuan.Paint += pnlTongQuan_Paint;
+            // 
+            // panel5
+            // 
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(lbl_DoanhThu);
+            panel5.Controls.Add(pictureBox5);
+            panel5.Controls.Add(label6);
+            panel5.ForeColor = SystemColors.ControlText;
+            panel5.Location = new Point(639, 112);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(309, 64);
+            panel5.TabIndex = 16;
+            // 
+            // lbl_DoanhThu
+            // 
+            lbl_DoanhThu.AutoSize = true;
+            lbl_DoanhThu.Font = new Font("Segoe UI", 14F);
+            lbl_DoanhThu.Location = new Point(73, 31);
+            lbl_DoanhThu.Name = "lbl_DoanhThu";
+            lbl_DoanhThu.Size = new Size(34, 32);
+            lbl_DoanhThu.TabIndex = 12;
+            lbl_DoanhThu.Text = "--";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.money_pig_icon_icons_com_56372;
+            pictureBox5.Location = new Point(3, -1);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(64, 64);
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(20, 75, 140);
+            label6.ImageAlign = ContentAlignment.MiddleLeft;
+            label6.Location = new Point(66, 3);
+            label6.Name = "label6";
+            label6.Size = new Size(86, 20);
+            label6.TabIndex = 9;
+            label6.Text = "Doanh Thu";
             // 
             // panel4
             // 
@@ -89,7 +133,7 @@
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(label5);
             panel4.ForeColor = SystemColors.ControlText;
-            panel4.Location = new Point(639, 112);
+            panel4.Location = new Point(12, 182);
             panel4.Name = "panel4";
             panel4.Size = new Size(203, 64);
             panel4.TabIndex = 15;
@@ -259,7 +303,7 @@
             lblTrangThaiDuLieu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTrangThaiDuLieu.Font = new Font("Segoe UI", 8.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTrangThaiDuLieu.ForeColor = Color.FromArgb(90, 110, 135);
-            lblTrangThaiDuLieu.Location = new Point(553, 306);
+            lblTrangThaiDuLieu.Location = new Point(628, 306);
             lblTrangThaiDuLieu.Name = "lblTrangThaiDuLieu";
             lblTrangThaiDuLieu.Size = new Size(325, 20);
             lblTrangThaiDuLieu.TabIndex = 8;
@@ -277,23 +321,23 @@
             dgvHoaDonGanDay.BorderStyle = BorderStyle.None;
             dgvHoaDonGanDay.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvHoaDonGanDay.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(227, 239, 255);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(20, 65, 120);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvHoaDonGanDay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(227, 239, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(20, 65, 120);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvHoaDonGanDay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvHoaDonGanDay.ColumnHeadersHeight = 34;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(35, 64, 100);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(220, 235, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(20, 65, 120);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvHoaDonGanDay.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(35, 64, 100);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(220, 235, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(20, 65, 120);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvHoaDonGanDay.DefaultCellStyle = dataGridViewCellStyle2;
             dgvHoaDonGanDay.EnableHeadersVisualStyles = false;
             dgvHoaDonGanDay.Location = new Point(12, 329);
             dgvHoaDonGanDay.MultiSelect = false;
@@ -303,7 +347,7 @@
             dgvHoaDonGanDay.RowHeadersWidth = 51;
             dgvHoaDonGanDay.RowTemplate.Height = 30;
             dgvHoaDonGanDay.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvHoaDonGanDay.Size = new Size(857, 217);
+            dgvHoaDonGanDay.Size = new Size(932, 311);
             dgvHoaDonGanDay.TabIndex = 7;
             // 
             // lblHoaDonGanDay
@@ -324,7 +368,7 @@
             pnlDuongKe.BackColor = Color.FromArgb(215, 229, 248);
             pnlDuongKe.Location = new Point(16, 105);
             pnlDuongKe.Name = "pnlDuongKe";
-            pnlDuongKe.Size = new Size(857, 1);
+            pnlDuongKe.Size = new Size(932, 1);
             pnlDuongKe.TabIndex = 3;
             // 
             // lblNgayHienTai
@@ -332,7 +376,7 @@
             lblNgayHienTai.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblNgayHienTai.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNgayHienTai.ForeColor = Color.FromArgb(75, 100, 130);
-            lblNgayHienTai.Location = new Point(681, 25);
+            lblNgayHienTai.Location = new Point(756, 25);
             lblNgayHienTai.Name = "lblNgayHienTai";
             lblNgayHienTai.Size = new Size(192, 23);
             lblNgayHienTai.TabIndex = 2;
@@ -361,55 +405,12 @@
             lblTieuDe.TabIndex = 0;
             lblTieuDe.Text = "Tổng quan hệ thống";
             // 
-            // panel5
-            // 
-            panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(lbl_DoanhThu);
-            panel5.Controls.Add(pictureBox5);
-            panel5.Controls.Add(label6);
-            panel5.ForeColor = SystemColors.ControlText;
-            panel5.Location = new Point(12, 182);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(203, 64);
-            panel5.TabIndex = 16;
-            // 
-            // lbl_DoanhThu
-            // 
-            lbl_DoanhThu.AutoSize = true;
-            lbl_DoanhThu.Font = new Font("Segoe UI", 14F);
-            lbl_DoanhThu.Location = new Point(73, 31);
-            lbl_DoanhThu.Name = "lbl_DoanhThu";
-            lbl_DoanhThu.Size = new Size(34, 32);
-            lbl_DoanhThu.TabIndex = 12;
-            lbl_DoanhThu.Text = "--";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.money_pig_icon_icons_com_56372;
-            pictureBox5.Location = new Point(3, -1);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(64, 64);
-            pictureBox5.TabIndex = 11;
-            pictureBox5.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(20, 75, 140);
-            label6.ImageAlign = ContentAlignment.MiddleLeft;
-            label6.Location = new Point(66, 3);
-            label6.Name = "label6";
-            label6.Size = new Size(86, 20);
-            label6.TabIndex = 9;
-            label6.Text = "Doanh Thu";
-            // 
             // frm_TongQuan
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 249, 255);
-            ClientSize = new Size(890, 574);
+            ClientSize = new Size(965, 668);
             Controls.Add(pnlTongQuan);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -418,6 +419,9 @@
             Load += frm_TongQuan_Load;
             pnlTongQuan.ResumeLayout(false);
             pnlTongQuan.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -431,9 +435,6 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvHoaDonGanDay).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 

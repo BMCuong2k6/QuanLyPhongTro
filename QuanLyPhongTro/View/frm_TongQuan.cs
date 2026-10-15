@@ -27,10 +27,12 @@ namespace QuanLyPhongTro.View
                 int soPhongDangThue = DAO_TongQuan.DemSoPhongDangThue();
                 int tongSoPhong = DAO_TongQuan.DemTongSoPhong();
                 decimal tongDoanhThu = DAO_TongQuan.TinhTongDoanhThu();
+                int soKhachThue = DAO_TongQuan.DemSoKhachThue();
                 lbl_PhongTrong.Text = soPhongTrong.ToString();
                 lbl_PhongDangThue.Text = soPhongDangThue.ToString();
                 lbl_TongPhong.Text = tongSoPhong.ToString();
                 lbl_DoanhThu.Text = tongDoanhThu.ToString("N0") + " VND";
+                lbl_KhachThue.Text = soKhachThue.ToString();
             }
             catch (Exception)
             {
@@ -67,7 +69,7 @@ namespace QuanLyPhongTro.View
         // Mở form chức năng trong pnlContent của form chính
         private void MoFormChucNang(Form formCon)
         {
-            
+
         }
 
         private void btnMoPhong_Click(object sender, EventArgs e)
@@ -96,6 +98,11 @@ namespace QuanLyPhongTro.View
         }
 
         private void lblHoaDonGanDay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlTongQuan_Paint(object sender, PaintEventArgs e)
         {
 
         }

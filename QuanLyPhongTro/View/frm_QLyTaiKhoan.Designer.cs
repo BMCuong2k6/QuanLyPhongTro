@@ -39,7 +39,6 @@
             txtb_TenTK = new TextBox();
             panel2 = new Panel();
             panel4 = new Panel();
-            btn_Thoat = new Button();
             btn_Xoa = new Button();
             btn_Sua = new Button();
             btn_Them = new Button();
@@ -66,13 +65,13 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(535, 507);
+            panel1.Size = new Size(947, 621);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.loginmanager_10029;
-            pictureBox1.Location = new Point(343, 16);
+            pictureBox1.Location = new Point(755, 56);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(180, 180);
@@ -111,7 +110,7 @@
             txtb_Email.Location = new Point(81, 161);
             txtb_Email.Margin = new Padding(3, 4, 3, 4);
             txtb_Email.Name = "txtb_Email";
-            txtb_Email.Size = new Size(203, 27);
+            txtb_Email.Size = new Size(247, 27);
             txtb_Email.TabIndex = 2;
             // 
             // txtb_MatKhau
@@ -119,7 +118,7 @@
             txtb_MatKhau.Location = new Point(154, 123);
             txtb_MatKhau.Margin = new Padding(3, 4, 3, 4);
             txtb_MatKhau.Name = "txtb_MatKhau";
-            txtb_MatKhau.Size = new Size(130, 27);
+            txtb_MatKhau.Size = new Size(174, 27);
             txtb_MatKhau.TabIndex = 1;
             // 
             // txtb_TenTK
@@ -127,7 +126,7 @@
             txtb_TenTK.Location = new Point(154, 84);
             txtb_TenTK.Margin = new Padding(3, 4, 3, 4);
             txtb_TenTK.Name = "txtb_TenTK";
-            txtb_TenTK.Size = new Size(130, 27);
+            txtb_TenTK.Size = new Size(174, 27);
             txtb_TenTK.TabIndex = 0;
             // 
             // panel2
@@ -135,39 +134,27 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 282);
+            panel2.Location = new Point(0, 244);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(535, 225);
+            panel2.Size = new Size(947, 377);
             panel2.TabIndex = 1;
             // 
             // panel4
             // 
-            panel4.Controls.Add(btn_Thoat);
             panel4.Controls.Add(btn_Xoa);
             panel4.Controls.Add(btn_Sua);
             panel4.Controls.Add(btn_Them);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 165);
+            panel4.Location = new Point(0, 317);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(535, 60);
+            panel4.Size = new Size(947, 60);
             panel4.TabIndex = 1;
-            // 
-            // btn_Thoat
-            // 
-            btn_Thoat.Location = new Point(435, 13);
-            btn_Thoat.Margin = new Padding(3, 4, 3, 4);
-            btn_Thoat.Name = "btn_Thoat";
-            btn_Thoat.Size = new Size(86, 31);
-            btn_Thoat.TabIndex = 3;
-            btn_Thoat.Text = "Thoat";
-            btn_Thoat.UseVisualStyleBackColor = true;
-            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // btn_Xoa
             // 
-            btn_Xoa.Location = new Point(199, 13);
+            btn_Xoa.Location = new Point(849, 16);
             btn_Xoa.Margin = new Padding(3, 4, 3, 4);
             btn_Xoa.Name = "btn_Xoa";
             btn_Xoa.Size = new Size(86, 31);
@@ -178,7 +165,7 @@
             // 
             // btn_Sua
             // 
-            btn_Sua.Location = new Point(106, 13);
+            btn_Sua.Location = new Point(432, 16);
             btn_Sua.Margin = new Padding(3, 4, 3, 4);
             btn_Sua.Name = "btn_Sua";
             btn_Sua.Size = new Size(86, 31);
@@ -205,7 +192,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(535, 225);
+            panel3.Size = new Size(947, 377);
             panel3.TabIndex = 0;
             // 
             // dgv_QLTaiKhoan
@@ -216,14 +203,14 @@
             dgv_QLTaiKhoan.Margin = new Padding(3, 4, 3, 4);
             dgv_QLTaiKhoan.Name = "dgv_QLTaiKhoan";
             dgv_QLTaiKhoan.RowHeadersWidth = 51;
-            dgv_QLTaiKhoan.Size = new Size(535, 225);
+            dgv_QLTaiKhoan.Size = new Size(947, 377);
             dgv_QLTaiKhoan.TabIndex = 0;
             // 
             // frm_QLyTaiKhoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 507);
+            ClientSize = new Size(947, 621);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -251,7 +238,6 @@
         private Button btn_Sua;
         private Button btn_Them;
         private Panel panel3;
-        private Button btn_Thoat;
         private DataGridView dgv_QLTaiKhoan;
         private Label label3;
         private Label label2;

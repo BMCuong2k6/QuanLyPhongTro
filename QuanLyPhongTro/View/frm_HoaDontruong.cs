@@ -16,7 +16,6 @@ namespace QuanLyPhongTro
         {
             InitializeComponent();
             LoadHoadontruong();
-            Resetform();
         }
         public void LoadHoadontruong()
         {
@@ -52,7 +51,7 @@ namespace QuanLyPhongTro
                 // Gọi hàm update và nhận kết quả trả về đúng chuẩn int
                 int kq = DAO_Hoadontruong.updateHoadontruong(
                     txtMaHoaDon.Text.Trim(),
-                    txtMhd.Text.Trim(),
+                    cbMaHD.Text.Trim(),
                     txtThang.Text.Trim(),
                     txtNam.Text.Trim(),
                     txtTienPhong.Text.Trim(),
@@ -94,7 +93,7 @@ namespace QuanLyPhongTro
             {
                 // 1. Lấy dữ liệu từ các ô TextBox / Control trên form của bạn
                 string maHoaDon = txtMaHoaDon.Text.Trim();
-                string maHD = txtMhd.Text.Trim();
+                string maHD = cbMaHD.Text.Trim();
                 string thang = txtThang.Text.Trim();
                 string nam = txtNam.Text.Trim();
                 string tienPhong = txtTienPhong.Text.Trim();
@@ -134,7 +133,7 @@ namespace QuanLyPhongTro
 
                 // Đổ dữ liệu từ các cột trên lưới lên các ô TextBox/ComboBox tương ứng ở trên
                 txtMaHoaDon.Text = row.Cells[0].Value.ToString(); // Hoặc dùng tên cột: row.Cells["MaHoaDon"].Value.ToString()
-                txtMhd.Text = row.Cells[1].Value.ToString();
+                cbMaHD.Text = row.Cells[1].Value.ToString();
                 txtThang.Text = row.Cells[2].Value.ToString();
                 txtNam.Text = row.Cells[3].Value.ToString();
                 txtTienPhong.Text = row.Cells[4].Value.ToString();
@@ -183,7 +182,7 @@ namespace QuanLyPhongTro
                     txtTienDien.Clear();
                     txtTienNuoc.Clear();
                     txtTienDichVu.Clear();
-                    txtMhd.Clear();
+                    cbMaHD.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -194,31 +193,30 @@ namespace QuanLyPhongTro
 
         private void dgvHoaDon_MouseClick(object sender, MouseEventArgs e)
         {
+            DataGridView.HitTestInfo hit = dgvHoaDon.HitTest(e.X, e.Y);
 
+            // Nếu bấm vào vùng trống bên dưới bảng
+            if (hit.Type == DataGridViewHitTestType.None || hit.RowIndex < 0)
+            {
+                txtMaHoaDon.Clear();
+
+                // Thay thế bằng tên ô Mã Hợp Đồng thực tế trên form của ông (ví dụ txtMaHD hoặc cboMaHD):
+                // txtMaHD.Clear(); 
+
+                txtThang.Clear();
+                txtNam.Clear();
+                txtTienPhong.Clear();
+                txtTienDien.Clear();
+                txtTienNuoc.Clear();
+                txtTienDichVu.Clear();
+                cbMaHD.SelectedIndex = -1;
+                cbTrangThai.SelectedIndex = -1; // Xóa chọn trạng thái
+
+                txtMaHoaDon.Focus();
+            }
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            Resetform();
-            LoadHoadontruong();
-        }
-        private void Resetform()
-        {
-            txtMaHoaDon.Clear();
-            txtMhd.Clear();
-            txtThang.Clear();
-            txtNam.Clear();
-            txtTienPhong.Clear();
-            txtTienDien.Clear();
-            txtTienNuoc.Clear();
-            txtTienDichVu.Clear();
-            cbTrangThai.SelectedIndex = -1;
-
-            txtMaHoaDon.ReadOnly = false;
-            txtMaHoaDon.Focus();
-        }
-
-        private void cbMaHD_SelectedIndexChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
