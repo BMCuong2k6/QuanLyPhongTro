@@ -1,22 +1,17 @@
-﻿
-using Microsoft.Data.SqlClient;
-using System;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace QuanLyPhongTro.DAO
 {
     internal class DAO_KhachThue_Quan
     {
-        private readonly string connectionString =
-            @"Data Source=.;Initial Catalog=QuanLyPhongTro;Integrated Security=True;TrustServerCertificate=True";
-
-        // HIỂN THỊ DANH SÁCH
+        // HIỂN THỊ DANH SÁCH KHÁCH THUÊ
         public DataTable GetAllKhachThue()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = Connection.open())
             {
                 string sql = @"SELECT MaNguoiThue, HoTen, CCCD, SDT, QueQuan
-                               FROM NguoiThue";
+                               FROM KhachThue";
 
                 using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
                 {
@@ -27,94 +22,89 @@ namespace QuanLyPhongTro.DAO
             }
         }
 
-        // THÊM
+        // THÊM KHÁCH THUÊ
         public bool ThemKhachThue(
-            string hoTen, string cccd, string queQuan, string sdt)
+            string hoTen,
+            string cccd,
+            string queQuan,
+            string sdt)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string sql = @"INSERT INTO KhachThue
+                           (HoTen, CCCD, QueQuan, SDT)
+                           VALUES (@HoTen, @CCCD, @QueQuan, @SDT)";
+
+            using (SqlConnection conn = Connection.open())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                string sql = @"INSERT INTO NguoiThue
-                               (HoTen, CCCD, QueQuan, SDT)
-                               VALUES (@HoTen, @CCCD, @QueQuan, @SDT)";
+                cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar, 100).Value = hoTen;
+                cmd.Parameters.Add("@CCCD", SqlDbType.VarChar, 20).Value = cccd;
+                cmd.Parameters.Add("@QueQuan", SqlDbType.NVarChar, 200).Value = queQuan;
+                cmd.Parameters.Add("@SDT", SqlDbType.VarChar, 20).Value = sdt;
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar, 100).Value = hoTen;
-                    cmd.Parameters.Add("@CCCD", SqlDbType.VarChar, 20).Value = cccd;
-                    cmd.Parameters.Add("@QueQuan", SqlDbType.NVarChar, 200).Value = queQuan;
-                    cmd.Parameters.Add("@SDT", SqlDbType.VarChar, 20).Value = sdt;
-
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                return cmd.ExecuteNonQuery() > 0;
             }
         }
 
-        // SỬA
+        // SỬA KHÁCH THUÊ
         public bool SuaKhachThue(
-            int maNguoiThue, string hoTen, string cccd,
-            string queQuan, string sdt)
+            int maNguoiThue,
+            string hoTen,
+            string cccd,
+            string queQuan,
+            string sdt)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string sql = @"UPDATE KhachThue
+                           SET HoTen = @HoTen,
+                               CCCD = @CCCD,
+                               QueQuan = @QueQuan,
+                               SDT = @SDT
+                           WHERE MaNguoiThue = @MaNguoiThue";
+
+            using (SqlConnection conn = Connection.open())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                string sql = @"UPDATE NguoiThue
-                               SET HoTen = @HoTen,
-                                   CCCD = @CCCD,
-                                   QueQuan = @QueQuan,
-                                   SDT = @SDT
-                               WHERE MaNguoiThue = @MaNguoiThue";
+                cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
+                cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar, 100).Value = hoTen;
+                cmd.Parameters.Add("@CCCD", SqlDbType.VarChar, 20).Value = cccd;
+                cmd.Parameters.Add("@QueQuan", SqlDbType.NVarChar, 200).Value = queQuan;
+                cmd.Parameters.Add("@SDT", SqlDbType.VarChar, 20).Value = sdt;
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
-                    cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar, 100).Value = hoTen;
-                    cmd.Parameters.Add("@CCCD", SqlDbType.VarChar, 20).Value = cccd;
-                    cmd.Parameters.Add("@QueQuan", SqlDbType.NVarChar, 200).Value = queQuan;
-                    cmd.Parameters.Add("@SDT", SqlDbType.VarChar, 20).Value = sdt;
-
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                return cmd.ExecuteNonQuery() > 0;
             }
         }
 
-        // XÓA
+        // XÓA KHÁCH THUÊ
         public bool XoaKhachThue(int maNguoiThue)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string sql = @"DELETE FROM KhachThue
+                           WHERE MaNguoiThue = @MaNguoiThue";
+
+            using (SqlConnection conn = Connection.open())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                string sql = @"DELETE FROM NguoiThue
-                               WHERE MaNguoiThue = @MaNguoiThue";
+                cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
-
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                return cmd.ExecuteNonQuery() > 0;
             }
         }
 
-        // TÌM THEO MÃ
+        // TÌM KHÁCH THUÊ THEO MÃ
         public DataTable TimTheoMaNguoiThue(int maNguoiThue)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string sql = @"SELECT MaNguoiThue, HoTen, CCCD, SDT, QueQuan
+                           FROM KhachThue
+                           WHERE MaNguoiThue = @MaNguoiThue";
+
+            using (SqlConnection conn = Connection.open())
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                string sql = @"SELECT MaNguoiThue, HoTen, CCCD, SDT, QueQuan
-                               FROM NguoiThue
-                               WHERE MaNguoiThue = @MaNguoiThue";
+                cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
-                    cmd.Parameters.Add("@MaNguoiThue", SqlDbType.Int).Value = maNguoiThue;
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-                        return dt;
-                    }
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                 }
             }
         }

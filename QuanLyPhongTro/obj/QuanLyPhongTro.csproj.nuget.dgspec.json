@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\Admin\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Admin\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
+        "projectName": "QuanLyPhongTro",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "C:\\Users\\TRUONG\\source\\repos\\BMCuong2k6\\QuanLyPhongTro\\QuanLyPhongTro\\QuanLyPhongTro.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TRUONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 8d47d034a55dcad593b974553de498bac54d6b46
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,6 +68,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[7.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.1, )"
             }
           },
           "imports": [
